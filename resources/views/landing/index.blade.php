@@ -1,3 +1,8 @@
+@extends('../templates/landing_main')        
+
+@section('title', 'Exodus Drugstore')
+
+@section('page')
         <div class="site-blocks-cover">
           <div class="container">
             <div class="row">
@@ -5,10 +10,11 @@
                 <div class="site-block-cover-content text-center">
                   <h1>Welcome to Exodus Drugstore</h1>
                   <p>
-                    <a href="" class="btn btn-primary px-5 py-3">Shop Now</a>
+                    <a href="assets/img/hero_1.jpg" class="btn btn-primary px-5 py-3">Shop Now</a>
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+@endsection

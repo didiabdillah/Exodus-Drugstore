@@ -69,7 +69,7 @@
                     
                   
                     <a href="" class="icons-btn d-inline-block bag">
-                      <span class="icon-shopping-bag"></span>
+                      <span class="icon-shopping-bag"> </span>
                     </a>
                  
                 </div>

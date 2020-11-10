@@ -1,3 +1,8 @@
+@extends('../templates/admin_main')
+
+@section('title', 'Insert Data Obat')
+
+@section('page')
 <div class="breadcrumbs">
     <div class="card">
         <div class="card-header">
@@ -8,7 +13,7 @@
                 <div class="row form-group">
                     <div class="col col-md-2"><label for="nama" class=" form-control-label">Name</label></div>
                     <div class="col-12 col-md-10">
-                        <input type="text" id="nama" name="nama" placeholder="Nama Obat..." class="form-control" value="<?= set_value('nama'); ?>">
+                        <input type="text" id="nama" name="nama" placeholder="Nama Obat..." class="form-control" value="">
                         
                     </div>
                     <!-- <div class="col-12 col-md-10">
@@ -18,7 +23,7 @@
                 <div class="row form-group">
                     <div class="col col-md-2"><label for="harga" class=" form-control-label">Price</label></div>
                     <div class="col-12 col-md-10">
-                        <input type="text" id="harga" name="harga" placeholder="Harga Obat..." class="form-control" value="<?= set_value('harga'); ?>">
+                        <input type="text" id="harga" name="harga" placeholder="Harga Obat..." class="form-control" value="">
                         
                     </div>
                     <!-- <div class="col-12 col-md-10">
@@ -71,3 +76,4 @@
 </div><!-- /#right-panel -->
 
 <!-- Right Panel -->
+@endsection

@@ -40,5 +40,19 @@ Route::get('/forgotpassword', function () {
     return view('auth/forgotpassword');
 });
 
+Route::get('/dashboard', function () {
+    return view('admin/dashboard');
+});
 
+Route::get('/edit_obat', function () {
+    return view('admin/edit_obat');
+});
+
+Route::get('/insert_obat', function () {
+    return view('admin/insert_obat');
+});
+
+Route::get('/obat', function () {
+    return view('admin/obat');
+});
 

@@ -1,3 +1,8 @@
+@extends('../templates/admin_main')
+
+@section('title', 'Dashboard')
+
+@section('page')
 <div class="breadcrumbs">
     <div class="container" style="margin-top: 20px;">
 
@@ -29,3 +34,4 @@
 
 
 </div><!-- /#right-panel -->
+@endsection

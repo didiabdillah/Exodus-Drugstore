@@ -1,3 +1,8 @@
+@extends('../templates/admin_main')
+
+@section('title', 'Data Obat')
+
+@section('page')
 <div class="breadcrumbs">
     <div class="container" style="margin-top: 20px;">
 
@@ -28,19 +33,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($obat as $row) { ?>
-                                        <tr>
-                                            <td></td>
-                                            <td>Rp. </td>
-                                            <td></td>
-                                            <td><img src="" alt="" style="width: 75px; height: 50px;"></td>
-                                            <td>
-                                                <a href="" class="btn btn-warning m-l-10 m-b-10">Edit</a>
-
-                                                <a href="" class="btn btn-danger m-l-10 m-b-10">Delete</a>
-                                            </td>
-                                        </tr>
-                                    <?php } ?>
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -56,3 +49,5 @@
 </div><!-- /#right-panel -->
 
 <!-- Right Panel -->
+
+@endsection

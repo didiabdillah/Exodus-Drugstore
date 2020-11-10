@@ -69,7 +69,9 @@ class DrugController extends Controller
      */
     public function edit($id)
     {
-        return view('admin/edit_obat');
+        $drug = DB::table('drugs')->where('drug_id', $id)->first();
+
+        return view('admin/edit_obat', ['drug' => $drug]);
     }
 
     /**
@@ -81,7 +83,19 @@ class DrugController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = [
+            'drug_name' => $request->drug_name,
+            'drug_price' => $request->drug_price,
+            'drug_stock' => $request->drug_stock,
+            'drug_description' => $request->drug_desc,
+            'drug_image' => 'test.jpeg'
+        ];
+
+        DB::table('drugs')
+            ->where('drug_id', $id)
+            ->update($data);
+
+        return redirect('/drug');
     }
 
     /**

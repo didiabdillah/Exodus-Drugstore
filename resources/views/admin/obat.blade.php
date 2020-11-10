@@ -41,7 +41,7 @@
                                         <td>
                                             <a href="{{url('drug/edit/' . $row->drug_id)}}" class="btn btn-warning m-l-10 m-b-10">Edit</a>
 
-                                            <form action="{{url('drug/delete/' . $row->drug_id)}}" method="POST">
+                                            <form action="{{url('drug/' . $row->drug_id)}}" method="POST">
                                                 @method('delete')
                                                 @csrf
                                                 <button onClick="return confirm('anda yakin ingin menghapus data');" class="btn btn-danger m-l-10 m-b-10">Delete</button>

@@ -17,13 +17,13 @@
     <link rel="shortcut icon" href="favicon.ico">
 
 
-    <link rel="stylesheet" href="assets/vendors/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="assets/vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="{{ URL::asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/vendors/bootstrap/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/vendors/themify-icons/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/vendors/flag-icon-css/css/flag-icon.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/vendors/selectFX/css/cs-skin-elastic.css') }}">
 
-    <link rel="stylesheet" href="assets/assets/css/style.css">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -33,11 +33,12 @@
 
 <body class="bg-dark">
 
-@yield('page')
-<script src="assets/vendors/jquery/dist/jquery.min.js"></script>
-<script src="assets/vendors/popper.js/dist/umd/popper.min.js"></script>
-<script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="assets/assets/js/main.js"></script>
+    @yield('page')
+
+    <script src="{{ URL::asset('assets/vendors/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/vendors/popper.js/dist/umd/popper.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/main.js') }}"></script>
 
 
 </body>

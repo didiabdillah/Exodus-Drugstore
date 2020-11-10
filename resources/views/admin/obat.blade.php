@@ -6,7 +6,7 @@
 <div class="breadcrumbs">
     <div class="container" style="margin-top: 20px;">
 
-        <a href="{{  url('drug/insert') }}"><button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus"></i> ADD</button></a>
+        <a href="{{  url('/drug/insert') }}"><button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus"></i> ADD</button></a>
         <hr>
 
     </div>
@@ -15,7 +15,7 @@
         <div class="animated fadeIn">
             <div class="row">
                 <div class="col-md-12">
-                    
+
                     <div class="card">
                         <div class="card-header">
                             <center><strong class="card-title">DATA</strong></center>
@@ -33,7 +33,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    
+
                                 </tbody>
                             </table>
                         </div>

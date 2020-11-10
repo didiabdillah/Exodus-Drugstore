@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DrugController extends Controller
 {
@@ -34,7 +35,17 @@ class DrugController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = [
+            'drug_name' => $request->drug_name,
+            'drug_price' => $request->drug_price,
+            'drug_stock' => $request->drug_stock,
+            'drug_description' => $request->drug_desc,
+            'drug_image' => 'test.jpeg'
+        ];
+
+        DB::table('drugs')->insert($data);
+
+        return redirect('/drug');
     }
 
     /**

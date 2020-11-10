@@ -7,7 +7,7 @@
     <div class="container">
         <div class="login-content">
             <div class="login-logo">
-                <a href="">
+                <a href="{{  url('/') }}">
                     <font color="white">
                     <h1 class="align-content">Exodus Drugstore</h1></font>
                 </a>
@@ -22,7 +22,7 @@
 
                 </form>
                 <div class="register-link m-t-15 text-center">
-                    <p><a href="">Login</a></p>
+                    <p><a href="{{  url('/login') }}">Login</a></p>
                 </div>
             </div>
         </div>

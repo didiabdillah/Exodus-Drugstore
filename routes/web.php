@@ -13,23 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landing/index');
-});
-Route::get('/etalase', function () {
-    return view('landing/etalase');
-});
-Route::get('/tentang', function () {
-    return view('landing/tentang');
-});
+Route::get('/', 'LandingController@index');
+Route::get('/etalase', 'LandingController@etalase');
+Route::get('/about', 'LandingController@about');
+Route::get('/etalase/{id}', 'LandingController@detail');
 
-Route::get('/etalase/{id}', function () {
-    return  view('landing/detail_product');
-});
 
 Route::get('/login', function () {
     return view('auth/login');
-
 });
 
 Route::get('/register', function () {
@@ -55,4 +46,3 @@ Route::get('/insert_obat', function () {
 Route::get('/obat', function () {
     return view('admin/obat');
 });
-

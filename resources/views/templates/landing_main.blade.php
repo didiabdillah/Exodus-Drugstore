@@ -36,8 +36,8 @@
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
-                <li class=""><a href="">Home</a></li>
-                <li class=""><a href="">Etalase</a></li>
+                <li class=""><a href="{{ url('/') }}">Home</a></li>
+                <li class=""><a href="{{ url('etalase') }}">Etalase</a></li>
                 <li>
                   <a href=""></a>
 
@@ -50,7 +50,7 @@
                     </div>
                   </div>
 
-                  <a href="">Login</a>
+                  <a href="{{ url ('login') }}">Login</a>
 
                 </li>
 

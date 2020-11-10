@@ -6,7 +6,7 @@
 <div class="breadcrumbs">
     <div class="container" style="margin-top: 20px;">
 
-        <a href=""><button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus"></i> ADD</button></a>
+        <a href="{{  url('drug/insert') }}"><button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus"></i> ADD</button></a>
         <hr>
 
     </div>

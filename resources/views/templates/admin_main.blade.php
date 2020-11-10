@@ -48,12 +48,12 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="">
-                        <a href=""> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                        <a href="{{  url('dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
 
                     </li>
                     <li class="">
-                        <a href=""> <i class="menu-icon fa fa-table"></i>Data</a>
+                        <a href="{{  url('drug') }}"> <i class="menu-icon fa fa-table"></i>Data</a>
                     </li>
 
                 </ul>

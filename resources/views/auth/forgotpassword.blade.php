@@ -1,3 +1,8 @@
+@extends('../templates/auth_main')
+
+@section('title', 'Forgot Password')
+
+@section('page')
 <div class="sufee-login d-flex align-content-center flex-wrap">
     <div class="container">
         <div class="login-content">
@@ -23,3 +28,4 @@
         </div>
     </div>
 </div>
+@endsection

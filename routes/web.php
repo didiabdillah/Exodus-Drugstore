@@ -27,5 +27,18 @@ Route::get('/etalase/{id}', function () {
     return  view('landing/detail_product');
 });
 
+Route::get('/login', function () {
+    return view('auth/login');
+
+});
+
+Route::get('/register', function () {
+    return view('auth/register');
+});
+
+Route::get('/forgotpassword', function () {
+    return view('auth/forgotpassword');
+});
+
 
 

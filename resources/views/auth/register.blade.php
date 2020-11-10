@@ -7,7 +7,7 @@
     <div class="container">
         <div class="login-content">
             <div class="login-logo">
-                <a href="">
+                <a href="{{  url('/') }}">
                     <h1 class="align-content">Exodus Drugstore </h1>
                 </a>
             </div>
@@ -37,7 +37,7 @@
                     <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign Up</button>
 
                     <div class="register-link m-t-15 text-center">
-                        <p>Have account ? <a href=""> Sign In Here</a></p>
+                        <p>Have account ? <a href="{{  url('login') }}"> Sign In Here</a></p>
                     </div>
                 </form>
             </div>

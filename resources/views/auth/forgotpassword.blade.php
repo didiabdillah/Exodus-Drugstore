@@ -7,7 +7,7 @@
     <div class="container">
         <div class="login-content">
             <div class="login-logo">
-                <a href="">
+                <a href="{{  url('/') }}">
                     <font color="white">
                     <h1 class="align-content">Exodus Drugstore</h1></font>
                 </a>

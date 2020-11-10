@@ -22,7 +22,7 @@
 
                 </form>
                 <div class="register-link m-t-15 text-center">
-                    <p><a href="{{  url('login') }}">Login</a></p>
+                    <p><a href="{{  url('/login') }}">Login</a></p>
                 </div>
             </div>
         </div>

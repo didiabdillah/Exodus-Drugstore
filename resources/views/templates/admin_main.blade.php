@@ -41,19 +41,19 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="{{  url('dashboard') }}">Exodus Drugstore</a>
+                <a class="navbar-brand" href="{{  url('/dashboard') }}">Exodus Drugstore</a>
                 <a class="navbar-brand hidden" href="">Exo</a>
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="">
-                        <a href="{{  url('dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                        <a href="{{  url('/dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
 
                     </li>
                     <li class="">
-                        <a href="{{  url('drug') }}"> <i class="menu-icon fa fa-table"></i>Data</a>
+                        <a href="{{  url('/drug') }}"> <i class="menu-icon fa fa-table"></i>Data</a>
                     </li>
 
                 </ul>

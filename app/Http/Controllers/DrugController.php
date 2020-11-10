@@ -14,7 +14,9 @@ class DrugController extends Controller
      */
     public function index()
     {
-        return view('admin/obat');
+        $drugs = DB::table('drugs')->get();
+
+        return view('admin/obat', ['drugs' => $drugs]);
     }
 
     /**

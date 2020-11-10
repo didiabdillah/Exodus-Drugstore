@@ -26,14 +26,25 @@
                                     <tr>
                                         <th>NAME</th>
                                         <th>PRICE</th>
-                                        <th>QUANTITY</th>
+                                        <th>STOCK</th>
                                         <th>IMAGE</th>
                                         <th></th>
-
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach($drugs as $row)
+                                    <tr>
+                                        <td>{{$row->drug_name}}</td>
+                                        <td>{{$row->drug_price}}</td>
+                                        <td>{{$row->drug_stock}}</td>
+                                        <td>{{$row->drug_image}}</td>
+                                        <td>
+                                            <a href="{{url('drug/edit/' . $row->drug_id)}}" class="btn btn-warning m-l-10 m-b-10">Edit</a>
 
+                                            <a onClick="return confirm('anda yakin ingin menghapus data');" href="{{url('drug/destroy/' . $row->drug_id)}}" class="btn btn-danger m-l-10 m-b-10">Delete</a>
+                                        </td>
+                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

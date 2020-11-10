@@ -19,17 +19,9 @@ Route::get('/about', 'LandingController@about');
 Route::get('/etalase/{id}', 'LandingController@detail');
 
 
-Route::get('/login', function () {
-    return view('auth/login');
-});
-
-Route::get('/register', function () {
-    return view('auth/register');
-});
-
-Route::get('/forgotpassword', function () {
-    return view('auth/forgotpassword');
-});
+Route::get('/login', 'AuthController@login');
+Route::get('/register', 'AuthController@register');
+Route::get('/forgot', 'AuthController@forgotpassword');
 
 Route::get('/dashboard', function () {
     return view('admin/dashboard');

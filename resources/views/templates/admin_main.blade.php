@@ -16,15 +16,15 @@
     <link rel="apple-touch-icon" href="apple-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
 
-    <link rel="stylesheet" href="assets/vendors/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="assets/vendors/selectFX/css/cs-skin-elastic.css">
-    <link rel="stylesheet" href="assets/vendors/jqvmap/dist/jqvmap.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('assets/vendors/bootstrap/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/vendors/themify-icons/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/vendors/flag-icon-css/css/flag-icon.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/vendors/selectFX/css/cs-skin-elastic.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/vendors/jqvmap/dist/jqvmap.min.css') }}">
 
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -32,104 +32,104 @@
 
 <body>
 
- <!-- Left Panel -->
+    <!-- Left Panel -->
 
- <aside id="left-panel" class="left-panel">
-     <nav class="navbar navbar-expand-sm navbar-default">
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
 
-         <div class="navbar-header">
-             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-                 <i class="fa fa-bars"></i>
-             </button>
-             <a class="navbar-brand" href="">Exodus Drugstore</a>
-             <a class="navbar-brand hidden" href="">Exo</a>
-         </div>
-
-         <div id="main-menu" class="main-menu collapse navbar-collapse">
-             <ul class="nav navbar-nav">
-                 <li class="">
-                     <a href=""> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
-                 </li>
-
-                 </li>
-                 <li class="">
-                     <a href=""> <i class="menu-icon fa fa-table"></i>Data</a>
-                 </li>
-
-             </ul>
-         </div><!-- /.navbar-collapse -->
-     </nav>
- </aside><!-- /#left-panel -->
-
- <!-- Left Panel -->
-
- <!-- Right Panel -->
-
-<div id="right-panel" class="right-panel">
-
-<!-- Header-->
-<header id="header" class="header">
-
-    <div class="header-menu">
-
-        <div class="col-sm-7">
-            <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-            <div class="header-left">
-
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="">Exodus Drugstore</a>
+                <a class="navbar-brand hidden" href="">Exo</a>
             </div>
-        </div>
 
-        <div class="col-sm-5">
-            <div class="user-area dropdown float-right">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="user-avatar rounded-circle" src="img/admin.jpg" alt="User Avatar">
-                </a>
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="">
+                        <a href=""> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    </li>
 
-                <div class="user-menu dropdown-menu">
-                    <a class="nav-link" href=""><i class="fa fa-power-off"></i> Logout</a>
+                    </li>
+                    <li class="">
+                        <a href=""> <i class="menu-icon fa fa-table"></i>Data</a>
+                    </li>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="img/admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href=""><i class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
 
+        </header><!-- /header -->
+        <!-- Header-->
+
+        @yield('page')
+
+        <script src="{{ URL::asset('assets/vendors/jquery/dist/jquery.min.js') }}"></script>
+        <script src="{{ URL::asset('assets/vendors/popper.js/dist/umd/popper.min.js') }}"></script>
+        <script src="{{ URL::asset('assets/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+        <script src="{{ URL::asset('assets/js/main.js') }}"></script>
 
 
-        </div>
-    </div>
+        <script src="{{ URL::asset('assets/vendors/chart.js/dist/Chart.bundle.min.js') }}"></script>
+        <script src="{{ URL::asset('assets/js/dashboard.js') }}"></script>
+        <script src="{{ URL::asset('assets/js/widgets.js') }}"></script>
+        <script src="{{ URL::asset('assets/vendors/jqvmap/dist/jquery.vmap.min.js') }}"></script>
+        <script src="{{ URL::asset('assets/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js') }}"></script>
+        <script src="{{ URL::asset('assets/vendors/jqvmap/dist/maps/jquery.vmap.world.js') }}"></script>
+        <script>
+            (function($) {
+                "use strict";
 
-</header><!-- /header -->
-<!-- Header-->
-
-@yield('page')
-
-<script src="assets/vendors/jquery/dist/jquery.min.js"></script>
-<script src="assets/vendors/popper.js/dist/umd/popper.min.js"></script>
-<script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="assets/js/main.js"></script>
-
-
-<script src="assets/vendors/chart.js/dist/Chart.bundle.min.js"></script>
-<script src="assets/js/dashboard.js"></script>
-<script src="assets/js/widgets.js"></script>
-<script src="assets/vendors/jqvmap/dist/jquery.vmap.min.js"></script>
-<script src="assets/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-<script src="assets/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-<script>
-    (function($) {
-        "use strict";
-
-        jQuery('#vmap').vectorMap({
-            map: 'world_en',
-            backgroundColor: null,
-            color: '#ffffff',
-            hoverOpacity: 0.7,
-            selectedColor: '#1de9b6',
-            enableZoom: true,
-            showTooltip: true,
-            values: sample_data,
-            scaleColors: ['#1de9b6', '#03a9f5'],
-            normalizeFunction: 'polynomial'
-        });
-    })(jQuery);
-</script>
+                jQuery('#vmap').vectorMap({
+                    map: 'world_en',
+                    backgroundColor: null,
+                    color: '#ffffff',
+                    hoverOpacity: 0.7,
+                    selectedColor: '#1de9b6',
+                    enableZoom: true,
+                    showTooltip: true,
+                    values: sample_data,
+                    scaleColors: ['#1de9b6', '#03a9f5'],
+                    normalizeFunction: 'polynomial'
+                });
+            })(jQuery);
+        </script>
 
 
 </body>

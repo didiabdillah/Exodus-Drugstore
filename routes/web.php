@@ -28,3 +28,7 @@ Route::get('/dashboard', function () {
 Route::get('/drug', 'DrugController@index');
 Route::get('/drug/insert', 'DrugController@create');
 Route::get('/drug/edit/{id}', 'DrugController@edit');
+
+Route::get('/test', function () {
+    return view('test');
+});

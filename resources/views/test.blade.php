@@ -1,0 +1,1 @@
+{{ URL::asset('css/styles.css') }}

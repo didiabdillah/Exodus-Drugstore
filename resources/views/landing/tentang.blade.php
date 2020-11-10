@@ -1,3 +1,8 @@
+@extends('../templates/landing_main')
+
+@section('title', 'Tentang')
+
+@section('page')
 <div class="site-section bg-light custom-border-bottom" data-aos="fade">
     <div class="container">
         <div class="row mb-5">
@@ -67,3 +72,5 @@
       </div>
 
     </div>
+
+    @endsection

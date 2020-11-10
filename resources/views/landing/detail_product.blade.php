@@ -1,3 +1,8 @@
+@extends('../templates/landing_main')
+
+@section('title', 'Detail Produk')
+
+@section('page')
 <div class="bg-light py-3">
   <div class="container">
     <div class="row">
@@ -31,7 +36,7 @@
               <div class="input-group-prepend">
                 <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
               </div>
-              <input type="number" name="qty" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" min="0" max="<?= $detail["stock"]; ?>">
+              <input type="number" name="qty" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" min="0" max="">
               <div class="input-group-append">
                 <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
               </div>
@@ -45,28 +50,6 @@
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-
-              <table class="table custom-table">
-
-                <tbody>
-                  <tr>
-                    <td>HPIS CODE</td>
-                    <td class="bg-light">999_200_40_0</td>
-                  </tr>
-                  <tr>
-                    <td>HEALTHCARE PROVIDERS ONLY</td>
-                    <td class="bg-light">No</td>
-                  </tr>
-                  <tr>
-                    <td>LATEX FREE</td>
-                    <td class="bg-light">Yes, No</td>
-                  </tr>
-                  <tr>
-                    <td>MEDICATION ROUTE</td>
-                    <td class="bg-light">Topical</td>
-                  </tr>
-                </tbody>
-              </table>
 
             </div>
 
@@ -100,3 +83,5 @@
   </div>
 </footer>
 </div>
+
+@endsection

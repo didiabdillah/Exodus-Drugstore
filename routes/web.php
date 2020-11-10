@@ -23,4 +23,9 @@ Route::get('/tentang', function () {
     return view('landing/tentang');
 });
 
+Route::get('/etalase/{id}', function () {
+    return  view('landing/detail_product');
+});
+
+
 

@@ -1,3 +1,8 @@
+@extends('../templates/landing_main')
+
+@section('title', 'Etalase')
+
+@section('page')
 <div class="bg-light py-3">
   <div class="container">
     <div class="row">
@@ -31,3 +36,5 @@
   </div>
 
 </div>
+
+@endsection

@@ -10,7 +10,7 @@
         <div class="site-block-cover-content text-center">
           <h1>Welcome to Exodus Drugstore</h1>
           <p>
-            <a href="" class="btn btn-primary px-5 py-3">Shop Now</a>
+            <a href="{{  url('/etalase') }}" class="btn btn-primary px-5 py-3">Shop Now</a>
           </p>
         </div>
       </div>

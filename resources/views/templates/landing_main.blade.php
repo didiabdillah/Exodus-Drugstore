@@ -30,7 +30,7 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="" class="js-logo-clone">Exodus Drugstore</a>
+              <a href="{{  url('/') }}" class="js-logo-clone">Exodus Drugstore</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">

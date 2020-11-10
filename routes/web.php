@@ -29,6 +29,7 @@ Route::get('/drug', 'DrugController@index');
 Route::get('/drug/insert', 'DrugController@create');
 Route::post('/drug/insert', 'DrugController@store');
 Route::get('/drug/edit/{id}', 'DrugController@edit');
+Route::delete('/drug/delete/{id}', 'DrugController@destroy');
 
 Route::get('/test', function () {
     return view('test');

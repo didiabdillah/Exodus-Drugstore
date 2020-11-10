@@ -92,6 +92,8 @@ class DrugController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('drugs')->where('drug_id', $id)->delete();
+
+        return redirect('/drug');
     }
 }

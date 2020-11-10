@@ -42,7 +42,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="{{  url('/dashboard') }}">Exodus Drugstore</a>
-                <a class="navbar-brand hidden" href="">Exo</a>
+                <a class="navbar-brand hidden" href="{{  url('/dashboard') }}">Exo</a>
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">

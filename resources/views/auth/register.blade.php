@@ -8,7 +8,7 @@
         <div class="login-content">
             <div class="login-logo">
                 <a href="">
-                    <h1 class="align-content">Exodus Drugstore</h1>
+                    <h1 class="align-content">Exodus Drugstore </h1>
                 </a>
             </div>
             <div class="login-form">

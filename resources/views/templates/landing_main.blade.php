@@ -91,7 +91,7 @@
     <script src="{{ URL::asset('assets/landing/js/jquery.magnific-popup.min.js') }}"></script>
     <script src="{{ URL::asset('assets/landing/js/aos.js') }}"></script>
 
-    <script src="assets/landing/js/main.js"></script>
+    <script src="{{URL::asset('assets/landing/js/main.js')}}"></script>
 
 </body>
 

@@ -53,7 +53,7 @@
                 <div class="row form-group">
                     <div class="col col-md-2"><label for="drug_image" class=" form-control-label">Image</label></div>
                     <div class="col-12 col-md-10">
-                        <input type="file" id="gambar" name="drug_image" placeholder="Banyak Stock Obat..." class="form-control">
+                        <input type="file" id="gambar" name="drug_image" class="form-control">
                     </div>
                     <!-- <div class="col-12 col-md-10">
                         <span class="help-block">Enter Nama Obat</span>

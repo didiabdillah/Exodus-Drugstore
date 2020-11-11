@@ -24,10 +24,10 @@
                 </div>
             </div>
 
-               <figure>
-                    <center><img src="pill.png" alt="Image placeholder" class="img-fluid rounded"></center>
-                        
-                </figure>
+            <figure>
+                <center><img src="{{URL::asset('assets/img/pill.png')}}" alt="Image placeholder" class="img-fluid rounded"></center>
+
+            </figure>
         </div>
     </div><!-- .animated -->
 </div><!-- .content -->

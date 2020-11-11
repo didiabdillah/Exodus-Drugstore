@@ -37,7 +37,7 @@
                                         <td>{{$row->drug_name}}</td>
                                         <td>{{$row->drug_price}}</td>
                                         <td>{{$row->drug_stock}}</td>
-                                        <td>{{$row->drug_image}}</td>
+                                        <td><img src="{{asset('assets/img/etalase/' . $row->drug_image)}}" alt="" width="200" style="width: 75px; height: 50px;"></td>
                                         <td>
                                             <a href="{{url('drug/edit/' . $row->drug_id)}}" class="btn btn-warning m-l-10 m-b-10">Edit</a>
 

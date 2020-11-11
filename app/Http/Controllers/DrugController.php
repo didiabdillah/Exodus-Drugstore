@@ -37,14 +37,21 @@ class DrugController extends Controller
      */
     public function store(Request $request)
     {
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('drug_image');
+
+        //Lokasi Foto 
+        $destination = "assets/img/etalase/";
+
         $data = [
             'drug_name' => $request->drug_name,
             'drug_price' => $request->drug_price,
             'drug_stock' => $request->drug_stock,
             'drug_description' => $request->drug_desc,
-            'drug_image' => 'test.jpeg'
+            'drug_image' => $file->getClientOriginalName()
         ];
 
+        $file->move($destination, $file->getClientOriginalName());
         DB::table('drugs')->insert($data);
 
         return redirect('/drug');

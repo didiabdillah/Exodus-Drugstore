@@ -21,7 +21,7 @@
                             <center><strong class="card-title">DATA</strong></center>
                         </div>
                         <div class="card-body">
-                            <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                            <table id="bootstrap-data-table-export" class="table table-bordered">
                                 <thead>
                                     <tr>
                                         <th>NO</th>

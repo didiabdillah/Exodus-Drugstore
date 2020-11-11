@@ -141,7 +141,11 @@ class DrugController extends Controller
      */
     public function destroy($id)
     {
+        $gambarOld =  DB::table('drugs')->where('drug_id', $id)->first();
+        $image_path = public_path("assets/img/etalase/" . $gambarOld->drug_image);
+
         DB::table('drugs')->where('drug_id', $id)->delete();
+        File::delete($image_path);
 
         return redirect('/drug');
     }

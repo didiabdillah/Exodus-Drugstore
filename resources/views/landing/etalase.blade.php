@@ -25,6 +25,9 @@
 
       @endforeach
     </div>
+    <div class="float-right">
+      {{ $etalase->links() }}
+    </div>
   </div>
 </div>
 <div class="row pt-5 mt-5 text-center">

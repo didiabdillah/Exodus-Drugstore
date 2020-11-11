@@ -56,8 +56,8 @@
                 <div class="row form-group">
                     <div class="col col-md-2"><label for="drug_image" class=" form-control-label">Image</label></div>
                     <div class="col-12 col-md-10">
-                        <input type="file" id="gambar" name="drug_image" placeholder="Banyak Stock Obat..." class="form-control" value="">
-                        <img src="" alt="" style="width: 150px; height: 100px;">
+                        <input type="file" id="gambar" name="drug_image" class="form-control">
+                        <img src="{{URL::asset('assets/img/etalase/' . $drug->drug_image)}}" alt="" style="width: 150px; height: 100px;">
                     </div>
                     <!-- <div class="col-12 col-md-10">
                         <span class="help-block">Enter Nama Obat</span>

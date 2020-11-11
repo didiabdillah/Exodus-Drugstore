@@ -24,6 +24,7 @@
                             <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
+                                        <th>NO</th>
                                         <th>NAME</th>
                                         <th>PRICE</th>
                                         <th>STOCK</th>
@@ -34,6 +35,7 @@
                                 <tbody>
                                     @foreach($drugs as $row)
                                     <tr>
+                                        <td>{{$loop->iteration}}</td>
                                         <td>{{$row->drug_name}}</td>
                                         <td>{{$row->drug_price}}</td>
                                         <td>{{$row->drug_stock}}</td>

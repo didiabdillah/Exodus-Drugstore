@@ -14,14 +14,16 @@
 <div class="site-section">
   <div class="container">
    <div class="row">
+  @foreach($etalase as $data)
 
           <div class="col-sm-6 col-lg-4 text-center item mb-4">
             <!-- <span class="tag">Sale</span> -->
             <a href=""> <img src="" alt="Image" style="width: 320px; height: 330px"></a>
-            <h3 class="text-dark"><a href=""></a></h3>
-            <p class="price">Rp. </p>
+            <h3 class="text-dark"><a href="">{{$data->drug_name}}</a></h3>
+            <p class="price">Rp.{{$data->drug_price}} </p>
           </div>
 
+    @endforeach
     </div>
   </div>
 </div>

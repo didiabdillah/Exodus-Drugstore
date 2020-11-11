@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LandingController extends Controller
 {
@@ -18,7 +19,8 @@ class LandingController extends Controller
 
     public function etalase()
     {
-        return view('landing/etalase');
+        $etalase = DB::table('drugs')->get();
+        return view('landing/etalase', ['etalase'=>$etalase]);
     }
 
     public function detail($id)

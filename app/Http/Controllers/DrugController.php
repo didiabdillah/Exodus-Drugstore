@@ -57,10 +57,10 @@ class DrugController extends Controller
             'drug_price' => $request->drug_price,
             'drug_stock' => $request->drug_stock,
             'drug_description' => $request->drug_desc,
-            'drug_image' => $file->getClientOriginalName()
+            'drug_image' => $file->hashName()
         ];
 
-        $file->move($destination, $file->getClientOriginalName());
+        $file->move($destination, $file->hashName());
         DB::table('drugs')->insert($data);
 
         return redirect('/drug');
@@ -117,9 +117,9 @@ class DrugController extends Controller
 
         //Inisiasi Data Gambar
         if ($file != NULL) {
-            $gambar = $file->getClientOriginalName();
+            $gambar =  $file->hashName();
             File::delete($image_path);
-            $file->move($destination, $file->getClientOriginalName());
+            $file->move($destination,  $file->hashName());
         } else {
             $gambar = $gambarOld->drug_image;
         }

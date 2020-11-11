@@ -47,13 +47,13 @@
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="">
-                        <a href="{{  url('/dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    <li class="@if(Request::segment(1) == 'dashboard') {{'active'}} @endif">
+                        <a href="{{  url('/dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard</a>
                     </li>
 
                     </li>
-                    <li class="">
-                        <a href="{{  url('/drug') }}"> <i class="menu-icon fa fa-table"></i>Data</a>
+                    <li class="@if(Request::segment(1) == 'drug') {{'active'}} @endif">
+                        <a href="{{  url('/drug') }}"> <i class="menu-icon fa fa-table"></i>Drugs Data</a>
                     </li>
 
                 </ul>
@@ -104,7 +104,6 @@
         <script src="{{ URL::asset('assets/vendors/popper.js/dist/umd/popper.min.js') }}"></script>
         <script src="{{ URL::asset('assets/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
         <script src="{{ URL::asset('assets/js/main.js') }}"></script>
-
 
         <script src="{{ URL::asset('assets/vendors/chart.js/dist/Chart.bundle.min.js') }}"></script>
         <script src="{{ URL::asset('assets/js/dashboard.js') }}"></script>

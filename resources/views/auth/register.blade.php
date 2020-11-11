@@ -16,22 +16,28 @@
                     <div class="form-group">
                         <label>Nama</label>
                         <input type="text" class="form-control" placeholder="Nama" name="nama">
-                        
+
                     </div>
                     <div class="form-group">
                         <label>Username</label>
                         <input type="text" class="form-control" placeholder="Username" name="username">
-                        
+
                     </div>
                     <div class="form-group">
                         <label>Email</label>
                         <input type="text" class="form-control" placeholder="Email" name="email">
-                        
+
                     </div>
                     <div class="form-group">
                         <label>Password</label>
                         <input type="password" class="form-control" placeholder="Password" name="password">
-                        
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Re-Type Password</label>
+                        <input type="password" class="form-control" placeholder="Password" name="retype_password">
+
                     </div>
 
                     <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign Up</button>

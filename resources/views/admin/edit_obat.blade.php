@@ -16,8 +16,12 @@
                 <div class="row form-group">
                     <div class="col col-md-2"><label for="drug_name" class=" form-control-label">Name</label></div>
                     <div class="col-12 col-md-10">
-                        <input type="text" id="nama" name="drug_name" placeholder="Nama Obat..." class="form-control" value="{{$drug->drug_name}}">
-
+                        <input type="text" id="nama" name="drug_name" placeholder="Nama Obat..." class="@error('drug_name') is-invalid @enderror form-control" value="{{$drug->drug_name}}">
+                        @error('drug_name')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
                     </div>
                     <!-- <div class="col-12 col-md-10">
                         <span class="help-block">Enter Nama Obat</span>
@@ -26,8 +30,12 @@
                 <div class="row form-group">
                     <div class="col col-md-2"><label for="drug_price" class=" form-control-label">Price</label></div>
                     <div class="col-12 col-md-10">
-                        <input type="text" id="harga" name="drug_price" placeholder="Harga Obat..." class="form-control" value="{{$drug->drug_price}}">
-
+                        <input type="text" id="harga" name="drug_price" placeholder="Harga Obat..." class="@error('drug_price') is-invalid @enderror form-control" value="{{$drug->drug_price}}">
+                        @error('drug_price')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
                     </div>
                     <!-- <div class="col-12 col-md-10">
                         <span class="help-block">Enter Nama Obat</span>
@@ -36,8 +44,12 @@
                 <div class="row form-group">
                     <div class="col col-md-2"><label for="drug_stock" class=" form-control-label">Stock</label></div>
                     <div class="col-12 col-md-10">
-                        <input type="text" id="banyak" name="drug_stock" placeholder="Banyak Stock Obat..." class="form-control" value="{{$drug->drug_stock}}">
-
+                        <input type="text" id="banyak" name="drug_stock" placeholder="Banyak Stock Obat..." class="@error('drug_stock') is-invalid @enderror form-control" value="{{$drug->drug_stock}}">
+                        @error('drug_stock')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
                     </div>
                     <!-- <div class="col-12 col-md-10">
                         <span class="help-block">Enter Nama Obat</span>
@@ -46,8 +58,12 @@
                 <div class="row form-group">
                     <div class="col col-md-2"><label for="drug_desc" class=" form-control-label">Description</label></div>
                     <div class="col-12 col-md-10">
-                        <textarea id="desc" name="drug_desc" placeholder="Deskripsi..." class="form-control">{{$drug->drug_description}}</textarea>
-
+                        <textarea id="desc" name="drug_desc" placeholder="Deskripsi..." class="@error('drug_desc') is-invalid @enderror form-control">{{$drug->drug_description}}</textarea>
+                        @error('drug_desc')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
                     </div>
                     <!-- <div class="col-12 col-md-10">
                         <span class="help-block">Enter Nama Obat</span>

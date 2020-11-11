@@ -99,6 +99,13 @@ class DrugController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'drug_name'  => 'required',
+            'drug_price'  => 'required',
+            'drug_stock'  => 'required',
+            'drug_desc'  => 'required'
+        ]);
+
         // menyimpan data file yang diupload ke variabel $file
         $file = $request->file('drug_image');
 

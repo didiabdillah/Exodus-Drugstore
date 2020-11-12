@@ -20,8 +20,8 @@
         </div>
       </div>
       <div class="col-md-6">
-        <h2 class="text-black"></h2>
-        <p>{{$etalase->drug_name}}</p>
+        <h2 class="text-black">{{$etalase->drug_name}}</h2>
+        <p>{{$etalase->drug_description}}</p>
 
 
         <h5>Stock : {{$etalase->drug_stock}}</h5>

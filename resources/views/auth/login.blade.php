@@ -9,20 +9,22 @@
             <div class="login-logo">
                 <a href="{{  url('/') }}">
                     <font color="white">
-                    <h1 class="align-content">Exodus Drugstore</h1></font>
+                        <h1 class="align-content">Exodus Drugstore</h1>
+                    </font>
                 </a>
             </div>
             <div class="login-form">
-                <form action="" method="POST">
+                <form action="{{  url('/login') }}" method="POST">
+                    @csrf
                     <div class="form-group">
                         <label>Username/Email address</label>
                         <input type="text" class="form-control" placeholder="Username/Email" name="email">
-                
+
                     </div>
                     <div class="form-group">
                         <label>Password</label>
                         <input type="password" class="form-control" placeholder="Password" name="password">
-                        
+
                     </div>
                     <div class="checkbox">
                         <label class="pull-right">

@@ -19,9 +19,11 @@ Route::get('/about', 'LandingController@about');
 Route::get('/etalase/{id}', 'LandingController@detail');
 
 Route::get('/login', 'AuthController@login');
+Route::post('/login', 'AuthController@login_process');
 Route::get('/register', 'AuthController@register');
 Route::post('/register', 'AuthController@register_process');
 Route::get('/forgot', 'AuthController@forgotpassword');
+Route::get('/logout', 'AuthController@logout');
 
 Route::get('/dashboard', function () {
     return view('admin/dashboard');

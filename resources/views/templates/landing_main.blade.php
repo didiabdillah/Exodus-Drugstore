@@ -46,7 +46,7 @@
 
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="">Logout</a>
+                      <a class="dropdown-item" href="{{url('/logout')}}">Logout</a>
                     </div>
                   </div>
 

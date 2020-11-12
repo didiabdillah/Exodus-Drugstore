@@ -13,6 +13,54 @@ class AuthController extends Controller
         return view('auth/login');
     }
 
+    public function login_process(Request $request)
+    {
+        $request->validate([
+            'email'  => 'required',
+            'password'  => 'required'
+        ]);
+
+        $user_login = $request->email;
+        $password = $request->password;
+
+        $user = DB::table('users')
+            ->where('user_username', $user_login)
+            ->orWhere('user_email', $user_login)
+            ->first();
+
+        if ($user) {
+            if ($user->user_username == $user_login || $user->user_email == $user_login) {
+                if (Hash::check($password, $user->user_password)) {
+
+                    //buat Session User
+                    $data = [
+                        'user_id' => $user->user_id,
+                        'user_username' => $user->user_username,
+                        'user_role' => $user->user_role,
+                        'user_name' => $user->user_name,
+                        'user_email' => $user->user_email
+                    ];
+
+                    $request->session()->put($data);
+
+                    if ($user->user_role == 1) {
+                        return redirect('/dashboard');
+                    } else if ($user->user_role == 2) {
+                        return redirect('/');
+                    } else {
+                        return redirect('/login');
+                    }
+                } else {
+                    return redirect('/login');
+                }
+            } else {
+                return redirect('/login');
+            }
+        } else {
+            return redirect('/login');
+        }
+    }
+
     public function register()
     {
         return view('auth/register');
@@ -45,5 +93,12 @@ class AuthController extends Controller
     public function forgotpassword()
     {
         return view('auth/forgotpassword');
+    }
+
+    public function logout(Request $request)
+    {
+        $request->session()->flush();
+
+        return redirect('/login');
     }
 }

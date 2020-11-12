@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->integer('user_role');
             $table->string('user_image', 255);
             $table->timestamps();
-            $table->foreign('user_role')->references('role_id')->on('roles');
+            $table->foreign('user_role')->references('role_id')->on('roles')->onUpdate('cascade');
         });
     }
 

@@ -39,14 +39,15 @@
                 <li class="@if(Request::segment(1) == NULL) {{'active'}} @endif"><a href="{{ url('/') }}">Home</a></li>
                 <li class="@if(Request::segment(1) == 'etalase') {{'active'}} @endif"><a href="{{ url('etalase') }}">Etalase</a></li>
                 <li>
-                  @if(Request::session()->get('user_role') == 1)
-                  <a href="{{url('/dashboard')}}">{{Request::session()->get('user_name')}}</a>
-                  @elseif(Request::session()->get('user_role') == 2)
+                  @if(Request::session()->get('user_role'))
                   <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       {{Request::session()->get('user_name')}}
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      @if(Request::session()->get('user_role') == 1)
+                      <a class="dropdown-item" href="{{url('/dashboard')}}">Admin</a>
+                      @endif
                       <a class="dropdown-item" href="{{url('/transaction')}}">Transaction</a>
                       <a class="dropdown-item" href="{{url('/logout')}}">Logout</a>
                     </div>

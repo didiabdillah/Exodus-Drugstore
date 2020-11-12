@@ -18,6 +18,9 @@ Route::get('/etalase', 'LandingController@etalase');
 Route::get('/about', 'LandingController@about');
 Route::get('/etalase/{id}', 'LandingController@detail');
 
+Route::get('/cart', 'CartController@list');
+Route::post('/cart', 'CartController@add');
+
 Route::get('/login', 'AuthController@login');
 Route::post('/login', 'AuthController@login_process');
 Route::get('/register', 'AuthController@register');

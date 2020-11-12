@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\DB;
 
 class CartController extends Controller
 {
+    public function list()
+    {
+        return view('cart/cart');
+    }
+
     public function add(Request $request)
     {
         $qty = DB::table('carts')->where(['cart_user_id' => $request->session()->get('user_id'), 'cart_drug_id' => $request->drug_id])->first();

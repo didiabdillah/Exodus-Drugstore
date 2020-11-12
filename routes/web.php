@@ -27,6 +27,7 @@ Route::get('/register', 'AuthController@register');
 Route::post('/register', 'AuthController@register_process');
 Route::get('/forgot', 'AuthController@forgotpassword');
 Route::get('/logout', 'AuthController@logout');
+Route::get('/blocked', 'AuthController@blocked');
 
 Route::get('/dashboard', function () {
     return view('admin/dashboard');

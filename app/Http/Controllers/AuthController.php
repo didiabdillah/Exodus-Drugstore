@@ -104,4 +104,9 @@ class AuthController extends Controller
         Session::flash('success', 'Logout Success');
         return redirect('/login');
     }
+
+    public function blocked(Request $request)
+    {
+        return view('auth/blocked');
+    }
 }

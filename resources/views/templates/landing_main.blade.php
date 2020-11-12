@@ -36,28 +36,28 @@
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
-                <li class=""><a href="{{ url('/') }}">Home</a></li>
-                <li class=""><a href="{{ url('etalase') }}">Etalase</a></li>
+                <li class="@if(Request::segment(1) == NULL) {{'active'}} @endif"><a href="{{ url('/') }}">Home</a></li>
+                <li class="@if(Request::segment(1) == 'etalase') {{'active'}} @endif"><a href="{{ url('etalase') }}">Etalase</a></li>
                 <li>
-                  <a href=""></a>
-
+                  @if(Request::session()->get('user_role') == 1)
+                  <a href="{{url('/dashboard')}}">{{Request::session()->get('user_name')}}</a>
+                  @elseif(Request::session()->get('user_role') == 2)
                   <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
+                      {{Request::session()->get('user_name')}}
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="{{url('/logout')}}">Logout</a>
                     </div>
                   </div>
-
+                  @else
                   <a href="{{ url ('login') }}">Login</a>
-
+                  @endif
                 </li>
 
                 <li>
-
                   <div class="icons">
-
+                    @if(Request::session()->get('user_id'))
                     <a href="" class="icons-btn d-inline-block bag">
                       <span class="icon-shopping-bag"></span>
                       <span class="number"></span>
@@ -66,12 +66,11 @@
                     <a href="" class="icons-btn d-inline-block bag">
                       <span class="icon-shopping-bag"></span>
                     </a>
-
-
+                    @else
                     <a href="" class="icons-btn d-inline-block bag">
-                      <span class="icon-shopping-bag"> </span>
+                      <span class="icon-shopping-bag"></span>
                     </a>
-
+                    @endif
                   </div>
                 </li>
               </ul>

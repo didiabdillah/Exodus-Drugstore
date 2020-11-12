@@ -47,6 +47,7 @@
                       {{Request::session()->get('user_name')}}
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="{{url('/transaction')}}">Transaction</a>
                       <a class="dropdown-item" href="{{url('/logout')}}">Logout</a>
                     </div>
                   </div>
@@ -56,18 +57,24 @@
                 </li>
 
                 <li>
+                  @php
+                  $userCart = DB::table('carts')->where('cart_user_id', Request::session()->get('user_id'))->count();
+                  @endphp
+
                   <div class="icons">
                     @if(Request::session()->get('user_id'))
-                    <a href="" class="icons-btn d-inline-block bag">
+                    @if($userCart > 0)
+                    <a href="{{url('/cart')}}" class="icons-btn d-inline-block bag">
                       <span class="icon-shopping-bag"></span>
-                      <span class="number"></span>
-                    </a>
-
-                    <a href="" class="icons-btn d-inline-block bag">
-                      <span class="icon-shopping-bag"></span>
+                      <span class="number">{{$userCart}}</span>
                     </a>
                     @else
-                    <a href="" class="icons-btn d-inline-block bag">
+                    <a href="{{url('/cart')}}" class="icons-btn d-inline-block bag">
+                      <span class="icon-shopping-bag"></span>
+                    </a>
+                    @endif
+                    @else
+                    <a href="{{url('/cart')}}" class="icons-btn d-inline-block bag">
                       <span class="icon-shopping-bag"></span>
                     </a>
                     @endif

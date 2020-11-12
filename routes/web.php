@@ -20,6 +20,7 @@ Route::get('/etalase/{id}', 'LandingController@detail');
 
 Route::get('/login', 'AuthController@login');
 Route::get('/register', 'AuthController@register');
+Route::post('/register', 'AuthController@register_process');
 Route::get('/forgot', 'AuthController@forgotpassword');
 
 Route::get('/dashboard', function () {

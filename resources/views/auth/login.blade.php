@@ -14,6 +14,11 @@
                 </a>
             </div>
             <div class="login-form">
+                @if (Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+                @endif
                 <form action="{{  url('/login') }}" method="POST">
                     @csrf
                     <div class="form-group">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
@@ -87,6 +88,7 @@ class AuthController extends Controller
 
         DB::table('users')->insert($data);
 
+        Session::flash('success', 'Register Success');
         return redirect('/login');
     }
 
@@ -99,6 +101,7 @@ class AuthController extends Controller
     {
         $request->session()->flush();
 
+        Session::flash('success', 'Logout Success');
         return redirect('/login');
     }
 }

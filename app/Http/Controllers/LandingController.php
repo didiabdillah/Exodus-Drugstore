@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class LandingController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
         return view('landing/index');
     }

@@ -16,13 +16,19 @@ class AuthController extends Controller
 
     public function login_process(Request $request)
     {
-        $request->validate([
-            'email'  => 'required',
-            'password'  => 'required'
-        ]);
+        $request->validate(
+            [
+                'email'  => 'required',
+                'user_password'  => 'required'
+            ],
+            [
+                'user_password.required' => 'The password field is required.',
+                'email.required' => 'The username/email field is required.'
+            ]
+        );
 
         $user_login = $request->email;
-        $password = $request->password;
+        $password = $request->user_password;
 
         $user = DB::table('users')
             ->where('user_username', $user_login)

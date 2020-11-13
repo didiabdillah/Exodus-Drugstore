@@ -11,9 +11,9 @@ class CartController extends Controller
 {
     public function remove($id)
     {
-        echo "ok";
-        die;
-        // DB::table('carts')->where('cart_id', $cart_id)->delete();
+        // echo "ok";
+        // die;
+        DB::table('carts')->where('cart_id', $id)->delete();
 
         return redirect()->back;
     }

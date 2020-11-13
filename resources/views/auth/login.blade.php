@@ -23,13 +23,21 @@
                     @csrf
                     <div class="form-group">
                         <label>Username/Email address</label>
-                        <input type="text" class="form-control" placeholder="Username/Email" name="email">
-
+                        <input type="text" class="form-control @error('email') is-invalid @enderror" placeholder="Username/Email" name="email" value="{{old('email')}}">
+                        @error('email')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control" placeholder="Password" name="password">
-
+                        <input type="password" class="form-control @error('user_password') is-invalid @enderror" placeholder="Password" name="user_password" value="{{old('user_password')}}">
+                        @error('user_password')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
                     </div>
                     <div class="checkbox">
                         <label class="pull-right">

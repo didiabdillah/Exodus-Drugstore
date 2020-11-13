@@ -9,14 +9,6 @@ use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
 {
-    public function remove($id)
-    {
-        // echo "ok";
-        // die;
-        DB::table('carts')->where('cart_id', $id)->delete();
-
-        return redirect()->back;
-    }
 
     public function list()
     {
@@ -57,6 +49,13 @@ class CartController extends Controller
                 $where,
                 $data
             );
+
+        return redirect()->back();
+    }
+
+    public function remove(Request $request)
+    {
+        DB::table('carts')->where('cart_id', $request->cart_id)->delete();
 
         return redirect()->back();
     }

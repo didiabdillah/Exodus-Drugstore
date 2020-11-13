@@ -46,9 +46,10 @@
                                 <td>Rp. {{$row->cart_drug_price * $row->cart_drug_qty}}</td>
                                 <td>{{$row->cart_status}}</td>
                                 <td>
-                                    <form action="{{url('/cart/' . $row->cart_id)}}" method="POST">
+                                    <form action="{{url('cart/')}}" method="post">
                                         @method('delete')
                                         @csrf
+                                        <input type="hidden" name="cart_id" value="{{$row->cart_id}}">
                                         <button onClick="return confirm('anda yakin ingin menghapus item');" class="btn btn-primary height-auto btn-sm">X</button>
                                     </form>
                                 </td>

@@ -11,7 +11,13 @@ class CartController extends Controller
 {
     public function list()
     {
-        return view('cart/cart');
+        $cart = DB::table('carts')
+            ->join('drugs', 'carts.cart_drug_id', '=', 'drugs.drug_id')
+            ->where('cart_user_id', Session::get('user_id'))
+            ->select('carts.*', 'drugs.drug_id', 'drugs.drug_name', 'drugs.drug_image')
+            ->get();
+
+        return view('cart/cart', ['cart' => $cart]);
     }
 
     public function add(Request $request)

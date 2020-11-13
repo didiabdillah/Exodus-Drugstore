@@ -29,26 +29,35 @@
                             </tr>
                         </thead>
                         <tbody>
-
+                            @php
+                            $total = 0;
+                            $item = 0;
+                            @endphp
+                            @foreach($cart as $row)
                             <tr>
                                 <td class="product-thumbnail">
-                                    <img src="" alt="Image" class="img-fluid">
+                                    <img src="{{URL::asset('assets/img/etalase/' . $row->drug_image)}}" alt="Image" class="img-fluid">
                                 </td>
                                 <td class="product-name">
-                                    <h2 class="h5 text-black"></h2>
+                                    <h2 class="h5 text-black">{{$row->drug_name}}</h2>
                                 </td>
-                                <td>Rp. </td>
+                                <td>Rp. {{$row->cart_drug_price}}</td>
+                                <td>{{$row->cart_drug_qty}}</td>
+                                <td>Rp. {{$row->cart_drug_price * $row->cart_drug_qty}}</td>
+                                <td>{{$row->cart_status}}</td>
                                 <td>
-
+                                    <form action="{{url('/cart/' . $row->cart_id)}}" method="POST">
+                                        @method('delete')
+                                        @csrf
+                                        <button type="submit" class="btn btn-primary height-auto btn-sm">X</button>
+                                    </form>
                                 </td>
-                                <td>Rp. </td>
-                                <td>
-
-                                </td>
-                                <td><a href="" class="btn btn-primary height-auto btn-sm">X</a></td>
                             </tr>
-
-
+                            @php
+                            $total = $total + ($row->cart_drug_price * $row->cart_drug_qty);
+                            $item = $loop->count;
+                            @endphp
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -65,11 +74,21 @@
 
                     <div class="row mb-5">
                         <div class="col-md-6">
+                            <span class="text-black">Item</span>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <strong class="text-black">
+                                {{$item}}
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-md-6">
                             <span class="text-black">Total</span>
                         </div>
                         <div class="col-md-6 text-right">
                             <strong class="text-black">
-
+                                Rp. {{$total}}
                             </strong>
                         </div>
                     </div>

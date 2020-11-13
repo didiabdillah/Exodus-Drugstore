@@ -10,13 +10,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
   <link rel="stylesheet" href="{{ URL::asset('assets/landing/fonts/icomoon/style.css') }}">
-
   <link rel="stylesheet" href="{{ URL::asset('assets/landing/css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('assets/landing/css/magnific-popup.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('assets/landing/css/jquery-ui.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('assets/landing/css/owl.carousel.min.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('assets/landing/css/owl.theme.default.min.css') }}">
-
 
   <link rel="stylesheet" href="{{ URL::asset('assets/landing/css/aos.css') }}">
 

@@ -9,6 +9,15 @@ use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
 {
+    public function remove($id)
+    {
+        echo "ok";
+        die;
+        // DB::table('carts')->where('cart_id', $cart_id)->delete();
+
+        return redirect()->back;
+    }
+
     public function list()
     {
         $cart = DB::table('carts')

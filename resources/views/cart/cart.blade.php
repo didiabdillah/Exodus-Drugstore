@@ -49,7 +49,7 @@
                                     <form action="{{url('/cart/' . $row->cart_id)}}" method="POST">
                                         @method('delete')
                                         @csrf
-                                        <button type="submit" class="btn btn-primary height-auto btn-sm">X</button>
+                                        <button onClick="return confirm('anda yakin ingin menghapus item');" class="btn btn-primary height-auto btn-sm">X</button>
                                     </form>
                                 </td>
                             </tr>

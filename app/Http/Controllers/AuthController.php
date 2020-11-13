@@ -69,13 +69,16 @@ class AuthController extends Controller
 
     public function register_process(Request $request)
     {
-        $request->validate([
-            'name'  => 'required',
-            'username'  => 'required',
-            'email'  => 'required',
-            'password'  => 'required',
-            'retype_password'  => 'required|same:password'
-        ]);
+        $request->validate(
+            [
+                'name'  => 'required',
+                'username'  => 'required',
+                'email'  => 'required',
+                'new_password'  => 'required',
+                'retype_password'  => 'required|same:new_password'
+            ],
+            ['new_password.required' => 'The password field is required.']
+        );
 
         $data = [
             'user_name' => $request->name,

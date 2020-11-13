@@ -45,8 +45,8 @@
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password" name="password" value="{{old('password')}}">
-                        @error('password')
+                        <input type="password" class="form-control @error('new_password') is-invalid @enderror" placeholder="Password" name="new_password" value="{{old('new_password')}}">
+                        @error('new_password')
                         <div class="invalid-feedback">
                             {{$message}}
                         </div>

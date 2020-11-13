@@ -2,6 +2,8 @@
 
 namespace App\Http\Middleware;
 
+use Illuminate\Support\Facades\Session;
+
 use Closure;
 
 class IsAdmin
@@ -15,6 +17,10 @@ class IsAdmin
      */
     public function handle($request, Closure $next)
     {
+        if (Session::get('user_role') != 1) {
+            return redirect('/blocked');
+        }
+
         return $next($request);
     }
 }

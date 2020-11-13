@@ -30,19 +30,21 @@ Route::group(['middleware' => 'login'], function () {
     Route::get('/logout', 'AuthController@logout');
     Route::get('/blocked', 'AuthController@blocked');
 
-    Route::get('/dashboard', function () {
-        return view('admin/dashboard');
-    });
-    Route::get('/drug', 'DrugController@index');
-    Route::get('/drug/insert', 'DrugController@create');
-    Route::post('/drug/insert', 'DrugController@store');
-    Route::get('/drug/edit/{id}', 'DrugController@edit');
-    Route::patch('/drug/edit/{id}', 'DrugController@update');
-    Route::delete('/drug/{id}', 'DrugController@destroy');
+    Route::group(['middleware' => 'isAdmin'], function () {
+        Route::get('/dashboard', function () {
+            return view('admin/dashboard');
+        });
+        Route::get('/drug', 'DrugController@index');
+        Route::get('/drug/insert', 'DrugController@create');
+        Route::post('/drug/insert', 'DrugController@store');
+        Route::get('/drug/edit/{id}', 'DrugController@edit');
+        Route::patch('/drug/edit/{id}', 'DrugController@update');
+        Route::delete('/drug/{id}', 'DrugController@destroy');
 
-    Route::get('/cart', 'CartController@list');
-    Route::post('/cart', 'CartController@add');
-    Route::delete('/cart', 'CartController@remove');
+        Route::get('/cart', 'CartController@list');
+        Route::post('/cart', 'CartController@add');
+        Route::delete('/cart', 'CartController@remove');
+    });
 });
 
 Route::get('/test', function () {

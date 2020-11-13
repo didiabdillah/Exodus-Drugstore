@@ -21,8 +21,8 @@ class CreateCartsTable extends Migration
             $table->integer('cart_drug_qty');
             $table->enum('cart_status', ['pending', 'process', 'success', 'canceled']);
             $table->timestamps();
-            $table->foreign('cart_user_id')->references('user_id')->on('users')->onUpdate('cascade');
-            $table->foreign('cart_drug_id')->references('drug_id')->on('drugs')->onUpdate('cascade');
+            $table->foreign('cart_user_id')->references('user_id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('cart_drug_id')->references('drug_id')->on('drugs')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

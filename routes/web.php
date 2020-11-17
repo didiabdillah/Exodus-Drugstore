@@ -28,8 +28,8 @@ Route::get('/transaksi', function () {
 Route::get('/order/edit/{id}', function () {
     return view('test');
 }); //Admin
-Route::get('/order/{id}', function () {
-    return view('test');
+Route::get('/transaksi/{id}', function () {
+    return view('admin/detail');
 }); //Admin
 Route::get('/transaction', function () {
     return view('test');

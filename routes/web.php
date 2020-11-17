@@ -22,8 +22,8 @@ Route::get('/invoice', function () {
 Route::get('/konfirmasi', function () {
     return view('checkout/konfirmasi');
 }); //User
-Route::get('/order', function () {
-    return view('test');
+Route::get('/transaksi', function () {
+    return view('admin/transaksi');
 }); //Admin
 Route::get('/order/edit/{id}', function () {
     return view('test');

@@ -57,6 +57,10 @@
                         <a href="{{  url('/drug') }}"> <i class="menu-icon fa fa-table"></i>Drugs Data</a>
                     </li>
 
+                    <li class="@if(Request::segment(1) == 'drug') {{'active'}} @endif">
+                        <a href="{{  url('/transaksi') }}"> <i class="menu-icon fa fa-table"></i>Data Transaksi</a>
+                    </li>
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>

@@ -46,7 +46,7 @@
 
                                         </td>
                                         <td>
-                                            <a href="" class="btn btn-info">Detail</a>
+                                            <a href="{{ url ('/transaksi/2')}}" class="btn btn-info">Detail</a>
                                         </td>
                                     </tr>
                               

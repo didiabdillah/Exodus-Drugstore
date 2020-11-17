@@ -31,8 +31,8 @@ Route::get('/order/edit/{id}', function () {
 Route::get('/transaksi/{id}', function () {
     return view('admin/detail');
 }); //Admin
-Route::get('/transaction', function () {
-    return view('test');
+Route::get('/transaksi', function () {
+    return view('landing/transaksiuser');
 }); //User
 Route::get('/transaction/{id}', function () {
     return view('test');

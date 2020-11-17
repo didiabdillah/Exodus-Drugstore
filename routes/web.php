@@ -12,6 +12,32 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//==========================================================
+Route::get('/checkout', function () {
+    return view('test');
+}); //User
+Route::get('/invoice', function () {
+    return view('test');
+}); //User
+Route::get('/paymentverify', function () {
+    return view('test');
+}); //User
+Route::get('/order', function () {
+    return view('test');
+}); //Admin
+Route::get('/order/edit/{id}', function () {
+    return view('test');
+}); //Admin
+Route::get('/order/{id}', function () {
+    return view('test');
+}); //Admin
+Route::get('/transaction', function () {
+    return view('test');
+}); //User
+Route::get('/transaction/{id}', function () {
+    return view('test');
+}); //User
+//===========================================================
 
 Route::get('/', 'LandingController@index');
 Route::get('/etalase', 'LandingController@etalase');

@@ -29,7 +29,7 @@
                         <tbody>
                             
                                     <td>
-                                        <a href="{{ url ('/transaksi/1')}}" class="btn btn-success  btn-sm">Detail</a>
+                                        <a href="{{ url ('/transaction/1')}}" class="btn btn-success  btn-sm">Detail</a>
                                     </td>
                                 </tr>
                             

@@ -28,10 +28,10 @@ Route::get('/transaksi', function () {
 Route::get('/transaksi/edit/{id}', function () {
     return view('admin/editstatus');
 }); //Admin
-Route::get('/transaksi/{id}', function () {
+Route::get('/transaction/{id}', function () {
     return view('admin/detail');
 }); //Admin
-Route::get('/transaksi', function () {
+Route::get('/transaksiuser', function () {
     return view('landing/transaksiuser');
 }); //User
 Route::get('/transaksi/{id}', function () {

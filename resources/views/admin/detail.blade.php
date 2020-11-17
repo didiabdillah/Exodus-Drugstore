@@ -1,6 +1,6 @@
 @extends('../templates/admin_main')
 
-@section('title', 'Dashboard')
+@section('title', 'Detail Transaksi')
 
 @section('page')
 <div class="container-fluid">

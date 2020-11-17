@@ -14,13 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 //==========================================================
 Route::get('/checkout', function () {
-    return view('test');
+    return view('checkout/checkout');
 }); //User
 Route::get('/invoice', function () {
-    return view('test');
+    return view('checkout/invoice');
 }); //User
-Route::get('/paymentverify', function () {
-    return view('test');
+Route::get('/konfirmasi', function () {
+    return view('checkout/konfirmasi');
 }); //User
 Route::get('/order', function () {
     return view('test');

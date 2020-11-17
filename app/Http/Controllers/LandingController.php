@@ -25,13 +25,8 @@ class LandingController extends Controller
 
     public function detail($id)
     {
-<<<<<<< HEAD
-        $drug = DB::table('drugs')->where('drug_id', $id)->first();
-        return view('landing/detail_product');
-=======
         $etalase = DB::table('drugs')->where('drug_id', $id)->first();
 
         return view('landing/detail_product', ['etalase' => $etalase]);
->>>>>>> d50d90705f485cfa71bc9cc01221236ba033fe6b
     }
 }

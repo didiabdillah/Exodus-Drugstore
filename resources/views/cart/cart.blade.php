@@ -6,7 +6,7 @@
 <div class="bg-light py-3">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 mb-0"><a href="{{url('/')}}">Exodus Drugstore</a> <span class="mx-2 mb-0">/</span><strong class="text-black">Cart</strong></div>
+            <div class="col-md-12 mb-0"><a href="{{url('/checkoutt')}}">Exodus Drugstore</a> <span class="mx-2 mb-0">/</span><strong class="text-black">Cart</strong></div>
         </div>
     </div>
 </div>
@@ -96,7 +96,7 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <button class="btn btn-primary btn-lg btn-block" onclick="window.location=''">Checkout</button>
+                            <button class="btn btn-primary btn-lg btn-block" onclick="window.location='checkout'">Checkout</button>
                         </div>
                     </div>
                 </div>

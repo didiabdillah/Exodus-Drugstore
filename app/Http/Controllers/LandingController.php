@@ -19,13 +19,19 @@ class LandingController extends Controller
 
     public function etalase()
     {
-        $etalase = DB::table('drugs')->get();
-        return view('landing/etalase', ['etalase'=>$etalase]);
+        $etalase = DB::table('drugs')->paginate(9);
+        return view('landing/etalase', ['etalase' => $etalase]);
     }
 
     public function detail($id)
     {
+<<<<<<< HEAD
         $drug = DB::table('drugs')->where('drug_id', $id)->first();
         return view('landing/detail_product');
+=======
+        $etalase = DB::table('drugs')->where('drug_id', $id)->first();
+
+        return view('landing/detail_product', ['etalase' => $etalase]);
+>>>>>>> d50d90705f485cfa71bc9cc01221236ba033fe6b
     }
 }

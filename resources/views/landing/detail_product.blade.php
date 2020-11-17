@@ -6,7 +6,7 @@
 <div class="bg-light py-3">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 mb-0"><a href="">Exodus Drugstore</a> <span class="mx-2 mb-0">/</span> <a href="">Etalase</a> <span class="mx-2 mb-0">/</span> <strong class="text-black"></strong></div>
+      <div class="col-md-12 mb-0"><a href="{{url('/')}}">Exodus Drugstore</a><span class="mx-2 mb-0">/</span><a href="{{url('/etalase')}}">Etalase</a><span class="mx-2 mb-0">/</span><strong class="text-black">{{$etalase->drug_name}}</strong></div>
     </div>
   </div>
 </div>
@@ -16,27 +16,28 @@
     <div class="row">
       <div class="col-md-5 mr-auto">
         <div class="border text-center">
-          <img src="" alt="Image" class="img-fluid p-5">
+          <img src="{{URL::asset('assets/img/etalase/' . $etalase->drug_image)}}" alt="Image" class="img-fluid p-5">
         </div>
       </div>
       <div class="col-md-6">
-        <h2 class="text-black"></h2>
-        <p></p>
+        <h2 class="text-black">{{$etalase->drug_name}}</h2>
+        <p>{{$etalase->drug_description}}</p>
 
 
-        <h5>Stock : </h5>
+        <h5>Stock : {{$etalase->drug_stock}}</h5>
 
-        <p>Rp. </p>
+        <p>Rp. {{$etalase->drug_price}}</p>
 
-
-
-        <form action="" method="POST">
+        <form action="{{url('/cart')}}" method="POST">
+          @csrf
+          <input type="hidden" name="drug_id" value="{{$etalase->drug_id}}">
+          <input type="hidden" name="drug_price" value="{{$etalase->drug_price}}">
           <div class="mb-5">
             <div class="input-group mb-3" style="max-width: 220px;">
               <div class="input-group-prepend">
                 <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
               </div>
-              <input type="number" name="qty" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" min="0" max="">
+              <input type="number" name="qty" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" min="0" max="{{$etalase->drug_stock}}">
               <div class="input-group-append">
                 <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
               </div>

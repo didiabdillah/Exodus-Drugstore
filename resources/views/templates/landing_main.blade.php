@@ -6,15 +6,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <link rel="shortcut icon" href="{{URL::asset('assets/img/favicon.ico')}}">
+
   <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
   <link rel="stylesheet" href="{{ URL::asset('assets/landing/fonts/icomoon/style.css') }}">
-
   <link rel="stylesheet" href="{{ URL::asset('assets/landing/css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('assets/landing/css/magnific-popup.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('assets/landing/css/jquery-ui.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('assets/landing/css/owl.carousel.min.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('assets/landing/css/owl.theme.default.min.css') }}">
-
 
   <link rel="stylesheet" href="{{ URL::asset('assets/landing/css/aos.css') }}">
 
@@ -36,42 +36,49 @@
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
-                <li class=""><a href="{{ url('/') }}">Home</a></li>
-                <li class=""><a href="{{ url('etalase') }}">Etalase</a></li>
+                <li class="@if(Request::segment(1) == NULL) {{'active'}} @endif"><a href="{{ url('/') }}">Home</a></li>
+                <li class="@if(Request::segment(1) == 'etalase') {{'active'}} @endif"><a href="{{ url('etalase') }}">Etalase</a></li>
                 <li>
-                  <a href=""></a>
-
+                  @if(Request::session()->get('user_role'))
                   <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
+                      {{Request::session()->get('user_name')}}
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="">Logout</a>
+                      @if(Request::session()->get('user_role') == 1)
+                      <a class="dropdown-item" href="{{url('/dashboard')}}">Admin</a>
+                      @endif
+                      <a class="dropdown-item" href="{{url('/transaction')}}">Transaction</a>
+                      <a class="dropdown-item" href="{{url('/logout')}}">Logout</a>
                     </div>
                   </div>
-
+                  @else
                   <a href="{{ url ('login') }}">Login</a>
-
+                  @endif
                 </li>
 
                 <li>
+                  @php
+                  $userCart = DB::table('carts')->where('cart_user_id', Request::session()->get('user_id'))->count();
+                  @endphp
 
                   <div class="icons">
-
-                    <a href="" class="icons-btn d-inline-block bag">
+                    @if(Request::session()->get('user_id'))
+                    @if($userCart > 0)
+                    <a href="{{url('/cart')}}" class="icons-btn d-inline-block bag">
                       <span class="icon-shopping-bag"></span>
-                      <span class="number"></span>
+                      <span class="number">{{$userCart}}</span>
                     </a>
-
-                    <a href="" class="icons-btn d-inline-block bag">
+                    @else
+                    <a href="{{url('/cart')}}" class="icons-btn d-inline-block bag">
                       <span class="icon-shopping-bag"></span>
                     </a>
-
-
-                    <a href="" class="icons-btn d-inline-block bag">
-                      <span class="icon-shopping-bag"> </span>
+                    @endif
+                    @else
+                    <a href="{{url('/cart')}}" class="icons-btn d-inline-block bag">
+                      <span class="icon-shopping-bag"></span>
                     </a>
-
+                    @endif
                   </div>
                 </li>
               </ul>
@@ -91,7 +98,7 @@
     <script src="{{ URL::asset('assets/landing/js/jquery.magnific-popup.min.js') }}"></script>
     <script src="{{ URL::asset('assets/landing/js/aos.js') }}"></script>
 
-    <script src="assets/landing/js/main.js"></script>
+    <script src="{{URL::asset('assets/landing/js/main.js')}}"></script>
 
 </body>
 

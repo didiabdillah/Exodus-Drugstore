@@ -9,20 +9,35 @@
             <div class="login-logo">
                 <a href="{{  url('/') }}">
                     <font color="white">
-                    <h1 class="align-content">Exodus Drugstore</h1></font>
+                        <h1 class="align-content">Exodus Drugstore</h1>
+                    </font>
                 </a>
             </div>
             <div class="login-form">
-                <form action="" method="POST">
+                @if (Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+                @endif
+                <form action="{{  url('/login') }}" method="POST">
+                    @csrf
                     <div class="form-group">
                         <label>Username/Email address</label>
-                        <input type="text" class="form-control" placeholder="Username/Email" name="email">
-                
+                        <input type="text" class="form-control @error('email') is-invalid @enderror" placeholder="Username/Email" name="email" value="{{old('email')}}">
+                        @error('email')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control" placeholder="Password" name="password">
-                        
+                        <input type="password" class="form-control @error('user_password') is-invalid @enderror" placeholder="Password" name="user_password" value="{{old('user_password')}}">
+                        @error('user_password')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                        @enderror
                     </div>
                     <div class="checkbox">
                         <label class="pull-right">

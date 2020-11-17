@@ -21,9 +21,10 @@
                             <center><strong class="card-title">DATA</strong></center>
                         </div>
                         <div class="card-body">
-                            <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                            <table id="bootstrap-data-table-export" class="table table-bordered">
                                 <thead>
                                     <tr>
+                                        <th>NO</th>
                                         <th>NAME</th>
                                         <th>PRICE</th>
                                         <th>STOCK</th>
@@ -33,11 +34,13 @@
                                 </thead>
                                 <tbody>
                                     @foreach($drugs as $row)
+
                                     <tr>
-                                        <td>{{$row->drug_name}}</td>
-                                        <td>{{$row->drug_price}}</td>
-                                        <td>{{$row->drug_stock}}</td>
-                                        <td><img src="{{asset('assets/img/etalase/' . $row->drug_image)}}" alt="" width="200" style="width: 75px; height: 50px;"></td>
+                                        <td><a href="{{url('/etalase/' . $row->drug_id)}}">{{$loop->iteration}}</a></td>
+                                        <td><a href="{{url('/etalase/' . $row->drug_id)}}">{{$row->drug_name}}</a></td>
+                                        <td><a href="{{url('/etalase/' . $row->drug_id)}}">{{$row->drug_price}}</a></td>
+                                        <td><a href="{{url('/etalase/' . $row->drug_id)}}">{{$row->drug_stock}}</a></td>
+                                        <td><a href="{{url('/etalase/' . $row->drug_id)}}"><img src="{{asset('assets/img/etalase/' . $row->drug_image)}}" alt="" width="200" style="width: 75px; height: 50px;"></a></td>
                                         <td>
                                             <a href="{{url('drug/edit/' . $row->drug_id)}}" class="btn btn-warning m-l-10 m-b-10">Edit</a>
 
@@ -48,6 +51,7 @@
                                             </form>
                                         </td>
                                     </tr>
+
                                     @endforeach
                                 </tbody>
                             </table>

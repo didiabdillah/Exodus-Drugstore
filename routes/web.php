@@ -25,8 +25,8 @@ Route::get('/konfirmasi', function () {
 Route::get('/transaksi', function () {
     return view('admin/transaksi');
 }); //Admin
-Route::get('/order/edit/{id}', function () {
-    return view('test');
+Route::get('/transaksi/edit/{id}', function () {
+    return view('admin/editstatus');
 }); //Admin
 Route::get('/transaksi/{id}', function () {
     return view('admin/detail');

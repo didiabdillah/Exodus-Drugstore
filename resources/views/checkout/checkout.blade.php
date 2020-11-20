@@ -19,7 +19,7 @@
             <div class="col-md-8">
 
                 <h6><strong>nama</strong></h6>
-                <h6>telephone</h6>
+                <!-- <h6>telephone</h6> -->
                 <h6>alamat</h6>
                 <a href="" data-toggle="modal" data-target="#ubahAlamat">Ubah Alamat</a>
             </div>
@@ -38,42 +38,35 @@
 
         <div class="row mt-3">
             <div class="col-md-8">
-            <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th class="product-thumbnail">Image</th>
-                                <th class="product-name">Product</th>
-                                <th class="product-price">Price</th>
-                                <th class="product-quantity">Quantity</th>
-                                <th class="product-total">Total</th>
-                                <th class="product-total">Status</th>
-                                <th class="product-remove">Delete</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                           
-                            <tr>
-                                <td class="product-thumbnail">
-                                    <img src="" alt="Image" class="img-fluid">
-                                </td>
-                                <td class="product-name">
-                                    <h2 class="h5 text-black"></h2>
-                                </td>
-                                <td>Rp. </td>
-                                <td></td>
-                                <td>Rp. </td>
-                                <td></td>
-                                <td>
-                                    <form action="{{url('cart/')}}" method="post">
-                                        
-                                        <input type="hidden" name="cart_id" value="">
-                                        <button onClick="return confirm('anda yakin ingin menghapus item');" class="btn btn-primary height-auto btn-sm">X</button>
-                                    </form>
-                                </td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="product-thumbnail">Image</th>
+                            <th class="product-name">Product</th>
+                            <th class="product-price">Price</th>
+                            <th class="product-quantity">Quantity</th>
+                            <th class="product-total">Total</th>
+                            <th class="product-total">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td class="product-thumbnail">
+                                <img src="" alt="Image" class="img-fluid">
+                            </td>
+                            <td class="product-name">
+                                <h2 class="h5 text-black"></h2>
+                            </td>
+                            <td>Rp. </td>
+                            <td></td>
+                            <td>Rp. </td>
+                            <td></td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
             </div>
         </div>
 
@@ -92,22 +85,27 @@
                                     <label for="ekspedisi">Ekspedisi</label>
                                     <select onchange="get_ongkir()" class="kurir form-control" id="ekspedisi" name="ekspedisi">
                                         <option>Pilih Ekspedisi</option>
-                                        <!-- <?php
-                                        // $eks = ['jne' => 'JNE', 'pos' => 'POS', 'tiki' => 'TIKI'];
-                                        // foreach ($eks as $key => $value) {
-                                            // echo "<option value='$key'> $value </option>";
-                                        // }
-                                        // ?> -->
+                                        @php
+                                        $eks = [
+                                        "jnereg" => 'JNE REG - 15.000',
+                                        "jneyes" => 'JNE YES - 17.000',
+                                        "jntreg" => 'J&T REG - 13.000',
+                                        "sicepat" => 'SICEPAT - 14.000'
+                                        ];
+                                        @endphp
+                                        @foreach ($eks as $key => $value)
+                                        <option value="{{$key}}">{{ $value }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="service">Service</label>
                             <select onchange="hitungtotal()" name="service" id="service" class="form-control">
 
                             </select>
-                        </div>
+                        </div> -->
                         <!-- <div class="row mt-2" id="kuririnfo" style="display: none">
                             <div class="col"></div>
                             <div class="col pt-2" id="kurirserviceinfo">
@@ -128,7 +126,7 @@
                                 Total Harga
                             </div>
                             <div class="col">
-                                <b>Rp.  </b>
+                                <b>Rp. </b>
                             </div>
                         </div>
                         <div class="row">
@@ -147,19 +145,21 @@
                                 <b id="totalbayar">Rp. </b>
                             </div>
                         </div>
-                        
-                            <form action="{{url('/invoice')}}" method="POST">
-                                <input type="hidden" id="notrans" name="notrans" value="">
-                                <input type="hidden" id="id_user" name="id_user" value="">
-                                <input type="hidden" id="id_alamat" name="id_alamat" value="">
-                                <input type="hidden" name="ongkir" id="ongkir" value="0" />
-                                <input type="hidden" name="bayar" id="bayar" value="0" />
-                                <button type="submit" name="btnsimpan" id="btnsimpan" class="btn btn-warning btn-block" style='display:none'>Buat Pesanan</button>
-                            </form>
-                     
+
+                        <form action="{{url('/invoice')}}" method="POST">
+                            @csrf
+                            <input type="hidden" id="notrans" name="notrans" value="">
+                            <input type="hidden" id="id_user" name="id_user" value="">
+                            <input type="hidden" id="id_alamat" name="id_alamat" value="">
+                            <input type="hidden" name="ongkir" id="ongkir" value="0" />
+                            <input type="hidden" name="bayar" id="bayar" value="0" />
+                            <button type="submit" name="btnsimpan" id="btnsimpan" class="btn btn-warning btn-block">Buat Pesanan</button>
+                        </form>
+
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
@@ -180,31 +180,31 @@
                     <div class="form-group">
                         <label for="alamat">Alamat <b class="text-danger">*</b></label>
                         <textarea class="form-control" name="alamat" id="alamat" rows="2"></textarea>
-                        
+
                     </div>
                     <div class="form-group">
                         <label for="telepon">Telepon</label>
                         <input type="number" class="form-control" id="telepon" name="telepon" value="">
-                        
+
                     </div>
                     <div class="form-group">
                         <label for="kota">Kota <b class="text-danger">*</b></label>
                         <select name="kota" id="kota" class="form-control">
-                           
+
                         </select>
-                       
+
                     </div>
                     <div class="form-group">
                         <label for="provinsi">Provinsi <b class="text-danger">*</b></label>
                         <select name="provinsi" id="provinsi" class="form-control">
-                           
+
                         </select>
-                        
+
                     </div>
                     <div class="form-group">
                         <label for="kodepos">Kode Pos</label>
                         <input type="number" class="form-control" id="kodepos" name="kodepos" value="">
-                       
+
                     </div>
 
                 </div>

@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/checkout', function () {
     return view('checkout/checkout');
 }); //User
-Route::get('/invoice', function () {
+Route::post('/invoice', function () {
     return view('checkout/invoice');
 }); //User
 Route::get('/konfirmasi', function () {

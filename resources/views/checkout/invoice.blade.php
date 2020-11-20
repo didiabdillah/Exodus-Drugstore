@@ -1,4 +1,3 @@
-
 @extends('../templates/landing_main')
 
 @section('title', 'Checkout')
@@ -11,17 +10,17 @@
                 <div class="mb-3 text-center">
                     <h4 class="mb-5">Transaksi Berhasil</h4>
                     Kode Pesanan anda : <b></b><br>
-                    Total belanja anda <b class="text-danger">Rp. ?></b><br>
+                    Total belanja anda <b class="text-danger">Rp. </b><br>
                     <br>
                 </div>
 
                 <div class="mb-3">
-                    <p class="text-justify">
+                    <p class="text-center">
                         Silahkan mentransferkan uang dengan total <b>Rp. </b> ke rekening di bawah ini : <br>
                     </p>
                 </div>
 
-                <div class="col-md-10 mx-auto text-left">
+                <div class="col-md-10 mx-auto text-center">
                     <table class='table table-borderless table-sm'>
                         <thead>
                             <tr>
@@ -41,8 +40,8 @@
                 </div>
 
                 <hr>
-                <p class="mt-2 mb-2">
-                    Setelah melakukan Pembayaran, silahkan konfirmasi pembayaran anda <a href=""><strong>disini</strong></a>.
+                <p class="mt-2 mb-2 text-center">
+                    Setelah melakukan Pembayaran, silahkan konfirmasi pembayaran anda <a href="" class="btn btn-success"><strong>disini</strong></a>.
                 </p>
             </div>
         </div>

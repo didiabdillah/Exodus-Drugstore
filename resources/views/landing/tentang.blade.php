@@ -20,10 +20,10 @@
 
 
                 <div class="site-section-heading pt-3 mb-4" >
-                    <h2 class="text-black">Tentang Exodus Drugstore</h2>
+                    <h2 class="text-black">About Exodus Drugstore</h2>
                 </div>
 
-                <p align="justify">Exodus Dragstore adalah perusahaan industri farmasi pertama di Indonesia yang didirikan oleh Pemerintah Hindia Belanda tahun 1817. Nama perusahaan ini pada awalnya adalah NV Chemicalien Handle Rathkamp & Co. Berdasarkan kebijaksanaan nasionalisasi atas eks perusahaan Belanda di masa awal kemerdekaan, pada tahun 1958, Pemerintah Republik Indonesia melakukan peleburan sejumlah perusahaan farmasi menjadi PNF (Perusahaan Negara Farmasi). Kemudian pada tanggal 16 Agustus 1971, bentuk badan hukum PNF diubah menjadi Perseroan Terbatas, sehingga nama perusahaan berubah menjadi Exodus Drugstore.</p>
+                <p align="justify">Exodus Dragstore is the first pharmaceutical industry company in Indonesia which was founded by the Dutch East Indies Government in 1817. The name of this company was originally NV Chemicalien Handle Rathkamp & Co. Based on the nationalization policy of former Dutch companies in the early days of independence, in 1958, the Government of the Republic of Indonesia merged a number of pharmaceutical companies into PNF (State Pharmaceuticals Company). Then on August 16, 1971, the form of the PNF legal entity was changed to a Limited Liability Company, so that the company name changed to Exodus Drugstore.</p>
             </div>
         </div>
     </div>

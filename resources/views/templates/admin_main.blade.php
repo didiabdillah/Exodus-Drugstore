@@ -58,7 +58,11 @@
                     </li>
 
                     <li class="@if(Request::segment(1) == 'transaksi') {{'active'}} @endif">
-                        <a href="{{  url('/transaksi') }}"> <i class="menu-icon fa fa-table"></i>Data Transaksi</a>
+                        <a href="{{  url('/transaksi') }}"> <i class="menu-icon fa fa-table"></i>Transaction Data</a>
+                    </li>
+
+                    <li class="@if(Request::segment(1) == 'delivery') {{'active'}} @endif">
+                        <a href="{{  url('/delivery') }}"> <i class="menu-icon fa fa-table"></i>Delivery Service Data</a>
                     </li>
 
                 </ul>

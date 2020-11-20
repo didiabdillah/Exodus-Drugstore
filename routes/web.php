@@ -59,6 +59,7 @@ Route::group(['middleware' => 'login'], function () {
 
     Route::get('/checkout', 'CheckoutController@checkout');
 
+
     Route::group(['middleware' => 'isAdmin'], function () {
         Route::get('/dashboard', function () {
             return view('admin/dashboard');
@@ -69,6 +70,9 @@ Route::group(['middleware' => 'login'], function () {
         Route::get('/drug/edit/{id}', 'DrugController@edit');
         Route::patch('/drug/edit/{id}', 'DrugController@update');
         Route::delete('/drug/{id}', 'DrugController@destroy');
+
+        Route::get('/delivery', 'DeliveryController@index');
+        Route::get('/delivery/insert', 'DeliveryController@insert');
     });
 });
 

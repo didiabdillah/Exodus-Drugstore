@@ -38,4 +38,11 @@ class DeliveryController extends Controller
 
         return redirect('/delivery');
     }
+
+    public function destroy($id)
+    {
+        DB::table('delivery_services')->where('id', $id)->delete();
+
+        return redirect('/delivery');
+    }
 }

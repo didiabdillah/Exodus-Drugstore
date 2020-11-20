@@ -41,9 +41,9 @@
                                         <td>Rp. {{$row->service_price}}</td>
 
                                         <td>
-                                            <a href="{{url('drug/edit/' . $row->id)}}" class="btn btn-warning m-l-10 m-b-10">Edit</a>
+                                            <a href="{{url('delivery/edit/' . $row->id)}}" class="btn btn-warning m-l-10 m-b-10">Edit</a>
 
-                                            <form action="{{url('drug/' . $row->id)}}" method="POST">
+                                            <form action="{{url('delivery/' . $row->id)}}" method="POST">
                                                 @method('delete')
                                                 @csrf
                                                 <button onClick="return confirm('anda yakin ingin menghapus data');" class="btn btn-danger m-l-10 m-b-10">Delete</button>

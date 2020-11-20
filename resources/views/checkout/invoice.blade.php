@@ -41,7 +41,7 @@
 
                 <hr>
                 <p class="mt-2 mb-2 text-center">
-                    Setelah melakukan Pembayaran, silahkan konfirmasi pembayaran anda <a href="" class="btn btn-success"><strong>disini</strong></a>.
+                    Setelah melakukan Pembayaran, silahkan konfirmasi pembayaran anda <a href="{{url('/konfirmasi')}}" class="btn btn-success"><strong>disini</strong></a>.
                 </p>
             </div>
         </div>

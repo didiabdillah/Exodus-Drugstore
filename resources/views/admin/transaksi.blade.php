@@ -13,7 +13,7 @@
             </div>
             <div class="card-body">
                 <div class="flash-data" data-flashdata="this->session->flashdata('flash'); ?>"></div>
-                
+
                 <div class="table-responsive">
                     <table id="datatables" class="display table table-bordered table-striped table-hover" width="100%" cellspacing="0">
                         <thead>
@@ -23,16 +23,21 @@
                                 <th>Pembeli</th>
                                 <th>Tanggal Pesan</th>
                                 <th>Status</th>
-                                <th>Aksi</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            
-                                    <td>
-                                        <a href="{{ url ('/transaction/1')}}" class="btn btn-success  btn-sm">Detail</a>
-                                    </td>
-                                </tr>
-                            
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td>
+                                <a href="{{ url ('/transaction/1')}}" class="btn btn-success  btn-sm">Detail</a>
+                            </td>
+                            </tr>
+
                         </tbody>
                     </table>
                 </div>

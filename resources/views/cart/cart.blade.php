@@ -96,7 +96,7 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <button class="btn btn-primary btn-lg btn-block" onclick="window.location='checkout'">Checkout</button>
+                            <button class="btn btn-primary btn-lg btn-block" onclick="window.location='{{url("/checkout")}}'">Checkout</button>
                         </div>
                     </div>
                 </div>

@@ -17,10 +17,9 @@
         </div>
         <div class="row mt-3">
             <div class="col-md-8">
-
-                <h6><strong>nama</strong></h6>
-                <!-- <h6>telephone</h6> -->
-                <h6>alamat</h6>
+                <h6><strong>Name : </strong>{{$user->user_name}}</h6>
+                <h6><strong>Phone : </strong></h6>
+                <h6><strong>Address : </strong></h6>
                 <a href="" data-toggle="modal" data-target="#ubahAlamat">Ubah Alamat</a>
             </div>
         </div>
@@ -50,21 +49,20 @@
                         </tr>
                     </thead>
                     <tbody>
-
+                        @foreach($data as $row)
                         <tr>
                             <td class="product-thumbnail">
-                                <img src="" alt="Image" class="img-fluid">
+                                <img src="{{URL::asset('assets/img/etalase/' . $row->drug_image)}}" alt="Image" class="img-fluid" style="width: 100px">
                             </td>
                             <td class="product-name">
-                                <h2 class="h5 text-black"></h2>
+                                <h2 class="h5 text-black">{{$row->drug_name}}</h2>
                             </td>
-                            <td>Rp. </td>
-                            <td></td>
-                            <td>Rp. </td>
-                            <td></td>
-
+                            <td>Rp. {{$row->cart_drug_price}}</td>
+                            <td>{{$row->cart_drug_qty}}</td>
+                            <td>Rp. {{$row->cart_drug_price * $row->cart_drug_qty}}</td>
+                            <td>{{$row->cart_status}}</td>
                         </tr>
-
+                        @endforeach
                     </tbody>
                 </table>
             </div>

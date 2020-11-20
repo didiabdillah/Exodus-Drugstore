@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //==========================================================
-Route::get('/checkout', function () {
-    return view('checkout/checkout');
-}); //User
 Route::post('/invoice', function () {
     return view('checkout/invoice');
 }); //User
@@ -59,6 +56,8 @@ Route::group(['middleware' => 'login'], function () {
     Route::get('/cart', 'CartController@list');
     Route::post('/cart', 'CartController@add');
     Route::delete('/cart', 'CartController@remove');
+
+    Route::get('/checkout', 'CheckoutController@checkout');
 
     Route::group(['middleware' => 'isAdmin'], function () {
         Route::get('/dashboard', function () {

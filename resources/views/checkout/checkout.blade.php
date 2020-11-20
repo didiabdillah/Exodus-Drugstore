@@ -12,7 +12,7 @@
         </div>
         <div class="row mt-3" style="border-bottom: 2px solid #e6eaee">
             <div class="col">
-                <h4>Alamat Pengiriman</h4>
+                <h4>Address</h4>
             </div>
         </div>
         <div class="row mt-3">
@@ -31,7 +31,7 @@
     <div class="container">
         <div class="row" style="border-bottom: 2px solid #e6eaee">
             <div class="col">
-                <h4>Konfirmasi Pesanan</h4>
+                <h4>Order Confirmation</h4>
             </div>
         </div>
 
@@ -80,9 +80,9 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
-                                    <label for="ekspedisi">Ekspedisi</label>
+                                    <label for="ekspedisi">expedition</label>
                                     <select onchange="get_ongkir()" class="kurir form-control" id="ekspedisi" name="ekspedisi">
-                                        <option>Pilih Ekspedisi</option>
+                                     <option>choose expedition</option>
                                         @php
                                         $eks = [
                                         "jnereg" => 'JNE REG - 15.000',
@@ -116,12 +116,12 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
-                        Ringkasan Belanja
+                     Shopping Summary
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                Total Harga
+                            Total Price
                             </div>
                             <div class="col">
                                 <b>Rp. </b>
@@ -129,7 +129,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                Ongkos Kirim
+                                Delivery Price
                             </div>
                             <div class="col">
                                 <b id="ongkoskirim">Rp. 0</b>
@@ -137,7 +137,7 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col">
-                                Total Bayar
+                            Total Pay
                             </div>
                             <div class="col">
                                 <b id="totalbayar">Rp. </b>
@@ -151,7 +151,7 @@
                             <input type="hidden" id="id_alamat" name="id_alamat" value="">
                             <input type="hidden" name="ongkir" id="ongkir" value="0" />
                             <input type="hidden" name="bayar" id="bayar" value="0" />
-                            <button type="submit" name="btnsimpan" id="btnsimpan" class="btn btn-warning btn-block">Buat Pesanan</button>
+                            <button type="submit" name="btnsimpan" id="btnsimpan" class="btn btn-warning btn-block">Create Order</button>
                         </form>
 
                     </div>
@@ -166,7 +166,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addNewMenuLabel">Ubah Alamat</h5>
+                <h5 class="modal-title" id="addNewMenuLabel">Change Address</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -176,39 +176,39 @@
                     <input type="hidden" id="id" name="id_user" value="">
                     <input type="hidden" id="id" name="id_alamat" value="">
                     <div class="form-group">
-                        <label for="alamat">Alamat <b class="text-danger">*</b></label>
+                        <label for="alamat">Address <b class="text-danger">*</b></label>
                         <textarea class="form-control" name="alamat" id="alamat" rows="2"></textarea>
 
                     </div>
                     <div class="form-group">
-                        <label for="telepon">Telepon</label>
+                        <label for="telepon">Telephone</label>
                         <input type="number" class="form-control" id="telepon" name="telepon" value="">
 
                     </div>
                     <div class="form-group">
-                        <label for="kota">Kota <b class="text-danger">*</b></label>
+                        <label for="kota">City <b class="text-danger">*</b></label>
                         <select name="kota" id="kota" class="form-control">
 
                         </select>
 
                     </div>
                     <div class="form-group">
-                        <label for="provinsi">Provinsi <b class="text-danger">*</b></label>
+                        <label for="provinsi">Province <b class="text-danger">*</b></label>
                         <select name="provinsi" id="provinsi" class="form-control">
 
                         </select>
 
                     </div>
                     <div class="form-group">
-                        <label for="kodepos">Kode Pos</label>
+                        <label for="kodepos">Zip Code</label>
                         <input type="number" class="form-control" id="kodepos" name="kodepos" value="">
 
                     </div>
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <button type="submit" class="btn btn-primary">Ubah</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Change</button>
                 </div>
             </form>
         </div>

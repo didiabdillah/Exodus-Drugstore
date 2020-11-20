@@ -23,7 +23,8 @@
                                 <th>Pembeli</th>
                                 <th>Tanggal Pesan</th>
                                 <th>Status</th>
-                                <th></th>
+                                <th>Aksi</th>
+                                
                             </tr>
                         </thead>
                         <tbody>

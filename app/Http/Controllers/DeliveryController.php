@@ -39,6 +39,34 @@ class DeliveryController extends Controller
         return redirect('/delivery');
     }
 
+    public function edit($id)
+    {
+        $data = DB::table('delivery_services')->where('id', $id)->first();
+
+        return view('admin/edit_delivery', compact('data'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'delivery_name'  => 'required',
+            'service_price'  => 'required',
+            'service_name'  => 'required'
+        ]);
+
+        $data = [
+            'delivery_name' => $request->delivery_name,
+            'service_price' => $request->service_price,
+            'service_name' => $request->service_name
+        ];
+
+        DB::table('delivery_services')
+            ->where('id', $id)
+            ->update($data);
+
+        return redirect('/delivery');
+    }
+
     public function destroy($id)
     {
         DB::table('delivery_services')->where('id', $id)->delete();

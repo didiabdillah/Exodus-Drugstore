@@ -30,21 +30,20 @@ class AuthController extends Controller
         $user_login = $request->email;
         $password = $request->user_password;
 
-        $user = DB::table('users')
-            ->where('user_username', $user_login)
+        $user = DB::table('operator')
+            ->where('nama', $user_login)
             ->orWhere('user_email', $user_login)
             ->first();
 
         if ($user) {
-            if ($user->user_username == $user_login || $user->user_email == $user_login) {
+            if ($user->nama == $user_login || $user->user_email == $user_login) {
                 if (Hash::check($password, $user->user_password)) {
 
                     //buat Session User
                     $data = [
                         'user_id' => $user->user_id,
-                        'user_username' => $user->user_username,
+                        'nama' => $user->nama,
                         'user_role' => $user->user_role,
-                        'user_name' => $user->user_name,
                         'user_email' => $user->user_email
                     ];
 
@@ -88,7 +87,7 @@ class AuthController extends Controller
 
         $data = [
             'user_name' => $request->name,
-            'user_username' => $request->username,
+            'nama' => $request->username,
             'user_email' => $request->email,
             'user_password' => Hash::make($request->password),
             'user_role' => 2,

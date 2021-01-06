@@ -7,26 +7,10 @@ use Illuminate\Support\Facades\DB;
 
 class LandingController extends Controller
 {
-    public function index()
+    public function login()
     {
-        return view('landing/index');
+        return view('auth/login');
     }
 
-    public function about()
-    {
-        return view('landing/tentang');
-    }
-
-    public function etalase()
-    {
-        $etalase = DB::table('drugs')->paginate(9);
-        return view('landing/etalase', ['etalase' => $etalase]);
-    }
-
-    public function detail($id)
-    {
-        $etalase = DB::table('drugs')->where('drug_id', $id)->first();
-
-        return view('landing/detail_product', ['etalase' => $etalase]);
-    }
+    
 }

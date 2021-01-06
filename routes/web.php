@@ -36,10 +36,9 @@ Route::get('/transaksi/{id}', function () {
 }); //User
 //===========================================================
 
-Route::get('/', 'LandingController@index');
-Route::get('/etalase', 'LandingController@etalase');
-Route::get('/about', 'LandingController@about');
-Route::get('/etalase/{id}', 'LandingController@detail');
+Route::get('/', 'AuthController@login');
+Route::post('/login', 'AuthController@login_process');
+
 
 Route::group(['middleware' => 'isNotLogin'], function () {
     Route::get('/login', 'AuthController@login');

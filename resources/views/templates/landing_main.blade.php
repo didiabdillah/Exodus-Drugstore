@@ -57,30 +57,7 @@
                   @endif
                 </li>
 
-                <li>
-                  @php
-                  $userCart = DB::table('carts')->where('cart_user_id', Request::session()->get('user_id'))->count();
-                  @endphp
-
-                  <div class="icons">
-                    @if(Request::session()->get('user_id'))
-                    @if($userCart > 0)
-                    <a href="{{url('/cart')}}" class="icons-btn d-inline-block bag">
-                      <span class="icon-shopping-bag"></span>
-                      <span class="number">{{$userCart}}</span>
-                    </a>
-                    @else
-                    <a href="{{url('/cart')}}" class="icons-btn d-inline-block bag">
-                      <span class="icon-shopping-bag"></span>
-                    </a>
-                    @endif
-                    @else
-                    <a href="{{url('/cart')}}" class="icons-btn d-inline-block bag">
-                      <span class="icon-shopping-bag"></span>
-                    </a>
-                    @endif
-                  </div>
-                </li>
+                
               </ul>
             </nav>
           </div>

@@ -42,27 +42,27 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="{{  url('/dashboard') }}">Exodus Drugstore</a>
-                <a class="navbar-brand hidden" href="{{  url('/dashboard') }}">Exo</a>
+                <a class="navbar-brand" href="{{  url('/dashboard') }}">MONITORING CONTENT</a>
+     
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="@if(Request::segment(1) == 'dashboard') {{'active'}} @endif">
-                        <a href="{{  url('/dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard</a>
+                        <a href="{{  url('/dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>-</a>
                     </li>
 
                     </li>
                     <li class="@if(Request::segment(1) == 'drug') {{'active'}} @endif">
-                        <a href="{{  url('/drug') }}"> <i class="menu-icon fa fa-table"></i>Drugs Data</a>
+                        <a href="{{  url('/drug') }}"> <i class="menu-icon fa fa-table"></i>-</a>
                     </li>
 
                     <li class="@if(Request::segment(1) == 'transaksi') {{'active'}} @endif">
-                        <a href="{{  url('/transaksi') }}"> <i class="menu-icon fa fa-table"></i>Transaction Data</a>
+                        <a href="{{  url('/transaksi') }}"> <i class="menu-icon fa fa-table"></i>-</a>
                     </li>
 
                     <li class="@if(Request::segment(1) == 'delivery') {{'active'}} @endif">
-                        <a href="{{  url('/delivery') }}"> <i class="menu-icon fa fa-table"></i>Delivery Service Data</a>
+                        <a href="{{  url('/delivery') }}"> <i class="menu-icon fa fa-table"></i>-</a>
                     </li>
 
                 </ul>

@@ -67,43 +67,7 @@ class AuthController extends Controller
         }
     }
 
-    public function register()
-    {
-        return view('auth/register');
-    }
-
-    public function register_process(Request $request)
-    {
-        $request->validate(
-            [
-                'name'  => 'required',
-                'username'  => 'required',
-                'email'  => 'required',
-                'new_password'  => 'required',
-                'retype_password'  => 'required|same:new_password'
-            ],
-            ['new_password.required' => 'The password field is required.']
-        );
-
-        $data = [
-            'user_name' => $request->name,
-            'nama' => $request->username,
-            'user_email' => $request->email,
-            'user_password' => Hash::make($request->password),
-            'user_role' => 2,
-            'user_image' => "default.jpeg"
-        ];
-
-        DB::table('users')->insert($data);
-
-        Session::flash('success', 'Register Success');
-        return redirect('/login');
-    }
-
-    public function forgotpassword()
-    {
-        return view('auth/forgotpassword');
-    }
+    
 
     public function logout(Request $request)
     {

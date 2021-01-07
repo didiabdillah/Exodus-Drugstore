@@ -72,6 +72,10 @@ Route::group(['middleware' => 'login'], function () {
 
         Route::get('/delivery', 'DeliveryController@index');
         Route::get('/delivery/insert', 'DeliveryController@insert');
+        Route::post('/delivery/insert', 'DeliveryController@store');
+        Route::get('/delivery/edit/{id}', 'DeliveryController@edit');
+        Route::patch('/delivery/edit/{id}', 'DeliveryController@update');
+        Route::delete('/delivery/{id}', 'DeliveryController@destroy');
     });
 });
 

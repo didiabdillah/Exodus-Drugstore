@@ -9,7 +9,7 @@
             <div class="login-logo">
                 <a href="{{  url('/') }}">
                     <font color="white">
-                        <h1 class="align-content">Monitoring Creator Editor</h1>
+                        <h1 class="align-content">Monitoring Content</h1>
                     </font>
                 </a>
             </div>

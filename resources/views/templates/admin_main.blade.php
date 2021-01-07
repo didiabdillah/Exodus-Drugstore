@@ -49,20 +49,24 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="@if(Request::segment(1) == 'dashboard') {{'active'}} @endif">
-                        <a href="{{  url('/dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>-</a>
+                        <a href="{{  url('/dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard (Operator)</a>
                     </li>
 
                     </li>
-                    <li class="@if(Request::segment(1) == 'drug') {{'active'}} @endif">
-                        <a href="{{  url('/drug') }}"> <i class="menu-icon fa fa-table"></i>-</a>
+                    <li class="@if(Request::segment(1) == 'transaksi') {{'active'}} @endif">
+                        <a href="{{  url('/transaksi') }}"> <i class="menu-icon fa fa-table"></i>Dashboard (Superadmin)</a>
                     </li>
 
                     <li class="@if(Request::segment(1) == 'transaksi') {{'active'}} @endif">
-                        <a href="{{  url('/transaksi') }}"> <i class="menu-icon fa fa-table"></i>-</a>
+                        <a href="{{  url('/transaksi') }}"> <i class="menu-icon fa fa-table"></i>Content</a>
                     </li>
 
-                    <li class="@if(Request::segment(1) == 'delivery') {{'active'}} @endif">
-                        <a href="{{  url('/delivery') }}"> <i class="menu-icon fa fa-table"></i>-</a>
+                    <li class="@if(Request::segment(1) == 'transaksi') {{'active'}} @endif">
+                        <a href="{{  url('/transaksi') }}"> <i class="menu-icon fa fa-table"></i>Operator</a>
+                    </li>
+
+                    <li class="@if(Request::segment(1) == 'transaksi') {{'active'}} @endif">
+                        <a href="{{  url('/transaksi') }}"> <i class="menu-icon fa fa-table"></i>Setting</a>
                     </li>
 
                 </ul>
@@ -82,7 +86,7 @@
             <div class="header-menu">
 
                 <div class="col-sm-7">
-                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+         
                     <div class="header-left">
 
                     </div>
@@ -108,6 +112,21 @@
         <!-- Header-->
 
         @yield('page')
+
+
+        <!-- <script src="{{URL::asset('assets/plugins/fontawesome-free/css/all.min.css')}}"></script>
+        <script src="{{URL::asset('assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}"></script>
+        <script src="{{URL::asset('assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}"></script>
+        <script src="{{URL::asset('assets/plugins/jqvmap/jqvmap.min.css')}}"></script>
+        <script src="{{URL::asset('assets/dist/css/adminlte.min.css')}}"></script>
+        <script src="{{URL::asset('assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}"></script>
+        <script src="{{URL::asset('assets/plugins/daterangepicker/daterangepicker.css')}}"></script>
+        <script src="{{URL::asset('assets/plugins/summernote/summernote-bs4.min.css')}}"></script> -->
+
+
+
+
+
 
         <script src="{{URL::asset('assets/vendors/jquery/dist/jquery.min.js')}}"></script>
         <script src="{{URL::asset('assets/vendors/popper.js/dist/umd/popper.min.js')}}"></script>
